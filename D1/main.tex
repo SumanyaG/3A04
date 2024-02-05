@@ -622,7 +622,7 @@
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE-EPE}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -630,15 +630,18 @@
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE-IA}1. ]
-	\item 
-\end{enumerate}
+	\item The system shall encrypt data exchanged between systems during transit using industry 
+	standard protocols.
+	{\bf Rationale:} Sensitive chat communications and files will be safeguarded and data tampering will be prevented.
+\end{enumerate} 
+
 % End SubSubSection
 
 \subsubsection{Productization Requirements}
 \label{ssub:productization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-P}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -646,7 +649,8 @@
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
-	\item 
+	\item The application must be compatible with Android 5.0 or above.
+	{\bf Rationale:} This ensures that the application can function on a wide variety of Android devices.
 \end{enumerate}
 % End SubSubSection
 
@@ -714,7 +718,8 @@
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-INT}1. ]
-	\item 
+	\item The application shall authenticate user to verify the identity of the user accessing the system.
+	{\bf Rationale:} Authentication ensures that only authorized users can log in and use the application.
 \end{enumerate}
 % End SubSubSection
 
@@ -730,7 +735,10 @@
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AU}1. ]
-	\item 
+	\item The application shall store chat history log for each agent securely on the server. The log shall contain 
+	identifiers of the communication agents, the date and time of the communication, and an accurate chat log.
+	{\bf Rationale:} Storing chat history log allows for trail auditing for reviewing past conversations, tracking changes, 
+	and investigating incidents.
 \end{enumerate}
 % End SubSubSection
 
@@ -757,7 +765,12 @@
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-C}1. ]
-	\item 
+	\item The system shall integrate a calendar that highlights important holidays and events from different cultures.
+	{\bf Rationale:} Storing calendar events from different cultures recognizes cultural diversity, helping users stay informed 
+	of significant occasions.
+	\item The system prevent users from creating accounts with discriminatory names, based on unacceptable words.
+	{\bf Rationale:} Preventing creating of discriminatory accounts will foster a professional environment within the workplace and 
+	promotes responsible use.
 \end{enumerate}
 % End SubSubSection
 
@@ -765,7 +778,7 @@
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-P}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -783,8 +796,15 @@
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-COMP}1. ]
-	\item 
+	\item The system shall comply with data protection laws through user consent for data processing, 
+	providing privacy notices, and implementing measures to secure user data.
+	{\bf Rationale:} User privacy is protected and ensures compliance to regulations governing the collection and processing
+	of personal information.
+	\item The system shall collect only the minimum amount of personal information necessary for stated purpose.
+	{\bf Rationale:} This supports PIPEDA's principle of limiting the collection of personal information to what is 
+	reasonable necessary [CITE].
 \end{enumerate}
+
 % End SubSubSection
 
 \subsubsection{Standards Requirements}
