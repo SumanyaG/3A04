@@ -492,7 +492,7 @@
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-A}1. ]
-	\item The system shall adhere to WCAG accessibility standards to ensure usability among those with disabilities. This includes providing 
+	\item The system shall adhere to Web Content Accessibility Guidelines (WCAG) accessibility standards to ensure usability among those with disabilities. This includes providing 
 	alternative text for images and using sufficient color contrast between text and background elements. Text should have a color contrast ratio of at least 4.5:1 and larger text should
 	have at least 3:1 contrast ratio. \\
 	{\bf Rationale:} Adhering to WCAG standards would ensure that the application is inclusive and accessible to a wider audience.
@@ -720,7 +720,12 @@
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AC}1. ]
-	\item 
+	\item The system shall enforce session timeouts to automatically log out users after a specified period of inactivity. \\
+	{\bf Rationale:} Session timeout reduce the risk of unauthorized access in case the user forgets to log out.
+	\item The system shall only allow users to access their accounts if the login credentials given by the user are correct. \\
+	{\bf Rationale:} This requirement ensures that access to the user account is attained when correct login details are provided. 
+	It serves as a means to authenticate users and adds a layer of security to user accounts, ensuring that only individuals with the 
+	correct credentials can log in.
 \end{enumerate}
 % End SubSubSection
 
@@ -737,7 +742,11 @@
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-P}1. ]
-	\item 
+	\item The application shall obtain explicit consent from users before collecting, processing, or sharing sensitive personal information. \\
+	{\bf Rationale:} Collection of explicit consent from the user will ensure that users are aware and agree to the specific use of their sensitive information. 
+	This promotes transparency and helps users make informed decisions about their information.
+	\item The application shall have a mechanism for users to access and review their personal information stored by the application. \\
+	{\bf Rationale:} Providing users access to their personal information foster transparency and allows users to verify the accuracy of their data.
 \end{enumerate}
 % End SubSubSection
 
@@ -756,7 +765,11 @@
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item 
+	\item The system shall not accept unexpected input. \\
+	{\bf Rationale:} This requirement aims to prevent attacks like SQL injections, where malicious input is used to manipulate or compromise the database. By rejecting such input, the system prevents unauthorized
+	access attempts.
+	\item  The system shall enforce strict content type validation for file uploads. \\
+	{\bf Rationale:} Validation of content type of uploaded files can prevent attackers from exploiting vulnerabilities associated with improper handling of file uploads.
 \end{enumerate}
 % End SubSubSection
 
@@ -779,7 +792,7 @@
 	{\bf Rationale:} Storing calendar events from different cultures recognizes cultural diversity, helping users stay informed 
 	of significant occasions. 
 	\item The system prevent users from creating accounts with discriminatory names, based on unacceptable words. \\
-	{\bf Rationale:} Preventing creating of discriminatory accounts will foster a professional environment within the workplace and 
+	{\bf Rationale:} Preventing creation of discriminatory accounts will foster a professional environment within the workplace and 
 	promotes responsible use.
 \end{enumerate}
 % End SubSubSection
@@ -813,6 +826,7 @@
 	\item The system shall collect only the minimum amount of personal information necessary for stated purpose. \\
 	{\bf Rationale:} This supports PIPEDA's principle of limiting the collection of personal information to what is 
 	reasonable necessary [CITE].
+
 \end{enumerate}
 
 % End SubSubSection
@@ -821,7 +835,12 @@
 \label{ssub:standards_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-STD}1. ]
-	\item 
+	\item The system shall use the latest version of <<insert protocol>> for securing data in transit. \\
+	{\bf Rationale:} <<insert protocol>> is essential in ensuring the confidentiality and integrity of data during transmission, complying with industry standards and safeguarding against unauthorized access and tampering.
+	\item The application shall be designed to be user-friendly and accessible, aligning with legal standards of WCAG. \\
+	{\bf Rationale:} Adherence to WCAG standards ensures legal compliance with inclusive design principle, making the application accessible to users with disabilities. 
+	\item  The application shall adhere to <<insert authentication mechanism>> for secure and delegated authorization. \\
+	{\bf Rationale:} <<authentication>> are employed to ensure legal requirements for user privacy, data protection, and secure access control are met.
 \end{enumerate}
 % End SubSubSection
 
