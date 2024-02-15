@@ -400,17 +400,19 @@
 	{\bf Rationale:} Utilization of company colors is crucial for maintaining a unified professional image, allowing the application to be 
 	recognizable to its users.
 	\item The system shall use clear and recognizable icons and images. \\
-	{\bf Rationale:} A clear and recognizable icons and images will improve application usability, helping users recognize the meaning behind
-	the icons and images. A standard icon should be high quality and have excellent pixel resolution (24x24 pixels to 48x48 pixels).
+	{\bf Rationale:} Clear and recognizable icons and images will improve application usability, helping users recognize the meaning behind
+	the icons and images. To be clear and recognizable, a standard icon should be high quality and have excellent pixel resolution (24x24 pixels to 48x48 pixels).
 	\item The application shall support responsive design to adapt to various screen sizes and orientations. \\
 	{\bf Rationale:} There are numerous screen sizes and thus, supporting responsive design would ensure that the application 
 	maintains a consistent and visually appealing layout across various device sizes, contributing to a seamless user experience.
-	\item The system shall integrate the company seal or emblem discreetly within the application design to emphasize professional identity. \\
+	\item The system shall integrate the company seal or emblem within the application design to emphasize professional identity. \\
 	{\bf Rationale:} The inclusion of the company seal reinforces brand authenticity and professionalism.
-	\item The system shall have an intuitive navigation structure and layout to enable users to find desired information and 
-	functionalities easily. \\
-	{\bf Rationale:} An intuitive layout allows users to navigate through the application effortlessly, reducing the learning 
-	curve and improving usability of the application. An intuitive layout follows the traditional organization of existing chat applications.
+	\item The system shall display messages in the chat application with distinguishable sender information, timestamp, and message content.  
+	To achieve a distinguishable message format, the system shall use the traditional chat-bubble conversation layout of standard
+	chat applications.\\
+	{\bf Rationale:} A distinguishable message format makes it easier for the users to follow discussions and contributes to an organized and 
+	user-friendly interface. 
+
 \end{enumerate}
 % End SubSubSection
 
@@ -421,12 +423,10 @@
 	\item The application shall adhere to a consistent color scheme throughout the user interface. \\
 	{\bf Rationale:} A consistent color scheme provides a cohesive and unified design.
 	\item The system shall use a font that is legible and readable across different devices, screen resolutions, and lighting conditions. \\
-	{\bf Rationale:} A readable and professional font would allow users to read legible messages, promoting effective communication among users. 
-	\item The system shall display messages in the chat application with clear formatting which includes distinguishable sender 
-	information, timestamp, and message content. \\
-	{\bf Rationale:} A clear message format makes it easier for the users to follow discussions and contributes to an organized and 
-	user-friendly interface. 
-
+	{\bf Rationale:} A readable and professional font would allow users to read messages, promoting effective communication among users. 
+	\item The application shall have a clean and professional design reflecting the corporate environment. 
+	{\bf Rationale:} A professional design will use a color palette, font, and visual elements that convey a sense
+	of professionalism and reliability.
 \end{enumerate}
 % End SubSubSection
 
@@ -442,16 +442,15 @@
 % Begin SubSubSection
 \begin{enumerate}[{UH-EOU}1. ]
 	\item The system shall have a clear and intuitive navigation layout, ensuring that users can effortlessly locate 
-	the information that they seek. \\
+	the information that they seek. An intuitive layout follows the traditional organization of existing chat applications. \\
 	{\bf Rationale:} An intuitive design ensures that users can seamlessly engage with the application features with minimal learning curve. 
-	This would enhance overall usability and contributes to increased user satisfaction. An intuitive layout follows the traditional organization of existing chat applications.
+	This would enhance overall usability and contributes to increased user satisfaction. 
 	\item The system shall allow users to quickly access recent chats, allowing users to efficiently engage with recent 
-	conversations without unnecessary navigation. \\
+	conversations without unnecessary navigation. Recent chat conversations should be located at the top of the users list of conversations.\\
 	{\bf Rationale:} Minimizing user effort to access recent chats ensures seamless user experience and promotes swift interaction 
-	with relevant contacts. Recent chat conversations should be located at the top of the users list of conversations.
+	with relevant contacts. Recognizable icons with clear action indicator are contextually relevant and avoids metamorphic imagery. 
 	\item The system shall use icons that clearly indicate the associated action or feature, giving users a visual cue of what each icon represents. \\
-	{\bf Rationale:} Recognizable icons with clear action indicator are contextually relevant and avoids metamorphic imagery. This enhances the usability of the application, allowing
-	users to navigate seamlessly through the application. 
+	{\bf Rationale:} This enhances the usability of the application, allowing users to navigate seamlessly through the application. 
 \end{enumerate} 
 
 % End SubSubSection
@@ -470,10 +469,10 @@
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-L}1. ]
-	\item The system shall include an interactive onboarding tutorial which guides the users through functionalities specific to the chat application, allowing
-	the users to learn the application key features within a time frame of 15 minutes. \\
-	{\bf Rationale:} An interactive onboarding tutorial would ensure that users are aware of chat application features, aiding in a smooth and 
-	efficient adaptation to the use of the application.
+	\item The system shall facilitate a user-friendly design that enables users to intuitively navigate and comprehend the chat application's key
+	 features within a maximum time frame of 10 minutes.\\
+	{\bf Rationale:} The absence of any tutorials necessitates achieving an intuitive navigation design
+	that would enable the users to swiftly understand and utilize the chat application within a couple of minutes of using.
 \end{enumerate}
 % End SubSubSection
 
@@ -485,6 +484,9 @@
 	An informative error message should consist of clear instructions on how to rectify the error written in natural language. \\
 	{\bf Rationale:} A clear error message can help users to understand the nature of the problem. This allows the users to 
 	take appropriate action to resolve the issue, reducing user frustration when an error is encountered.
+	\item The system shall use symbols and icons that are culturally neutral and have universally positive associations and meaning.\\
+	{\bf Rationale:} This requirement entails the avoidance of using symbols that may have different meanings or connotations
+	in various cultures. This means opting for widely used and recognizable symbols.
 \end{enumerate}
 % End SubSubSection
 
@@ -501,7 +503,6 @@
 % End SubSubSection
 
 % End SubSection
-
 
 
 
@@ -523,6 +524,9 @@
 	\item The system shall allow users to query chat history with a response time of no more than 500 milliseconds. \\
 	{\bf Rationale:} A swift search query response time enable users to efficiently locate messages in chat history, improving 
 	usability of the application. \\
+	\item The system shall process and display response suggestions within a maximum of 500 milliseconds. \\
+	{\bf Rationale:} This requirement provides users a seamless and responsive user experience, reducing 
+	the latency of the suggestion feature.
 \end{enumerate}
 % End SubSubSection
 
@@ -547,8 +551,8 @@
 	time of sent and received messages accurately reflect the time they were processed. \\
 	{\bf Rationale:} Ensuring high precision in the timestamp of message delivery contributes to the reliability
 	and real-time nature of the chat application,  providing a responsive and communication experience to users.
-	\item can add more!!! \\
-	{\bf Rationale:}
+	\item  The system shall display accurate indicators of user online, offline, or away status in real-time. \\
+	{\bf Rationale:} This requirement ensures that users have a precise understanding of the availability of other user for effective communication.
 \end{enumerate}
 % End SubSubSection
 
