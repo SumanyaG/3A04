@@ -553,6 +553,10 @@
 	and real-time nature of the chat application,  providing a responsive and communication experience to users.
 	\item  The system shall display accurate indicators of user online, offline, or away status in real-time. \\
 	{\bf Rationale:} This requirement ensures that users have a precise understanding of the availability of other user for effective communication.
+	\item  The system shall accurately log 99.9\% of sent and received messages in the chat history. The content of each message, emojis, and external media files (images, videos, audio)
+	should be logged without any loss or alteration. Edited or deleted messages should be reflected for at least 99\% of cases. \\
+	{\bf Rationale:} Ensuring accurate log of chat history is crucial to maintaining data integrity. This ensures that users can trust the system to accurately
+	store chat history, supporting efficient retrieval and review of past messages.
 \end{enumerate}
 % End SubSubSection
 
@@ -644,9 +648,9 @@
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE-IA}1. ]
-	\item The system shall encrypt data exchanged between systems during transit using industry 
-	standard protocols. \\
-	{\bf Rationale:} Sensitive chat communications and files will be safeguarded and data tampering will be prevented.
+	\item The application shall integrate with relevant APIs to fetch and display contextually relevant message response suggestions.
+	{\bf Rationale:} Leveraging an external API enables the application to benefit from complex algorithms (Natural Language Processing and 
+	machine learning models) allowing for more intelligent suggestions.
 \end{enumerate} 
 
 % End SubSubSection
@@ -663,7 +667,7 @@
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
-	\item The application must be compatible with Android 5.0 or above. \\
+	\item The application shall be compatible with Android 5.0 or above. \\
 	{\bf Rationale:} This ensures that the application can function on a wide variety of Android devices.
 \end{enumerate}
 % End SubSubSection
