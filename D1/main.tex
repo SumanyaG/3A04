@@ -164,13 +164,25 @@
 % Begin SubSection
 SecureChat is intended to be a user-friendly app designed for the current employees of a specific organization. As a result, the following are the minimum qualifications expected from all users:
 \begin{itemize}
-	\item Education Level: Basic Literacy Skills
+	\item Education Level: Basic literacy skills
  	\begin{itemize}
   		\item Users are expected to possess basic English literacy skills, specifically reading and writing.
     		\item The interface of the app is intended to be intuitive and user-friendly with clear instructions provided for using security features. This means that users with varying levels of education should be able to use the app.
- 	\item Technical Expertise:
-  	\item Experience:
-   	\item Security Clearance:
+      	\end{itemize}
+ 	\item Technical Expertise: Basic smartphone navigation skills
+  	\begin{itemize}
+   		\item Users are expected to have basic smartphone (specifically, Android) navigation skills.
+     		\item Although not mandatory, ideally, users should have basic security awareness about concepts such as password security, phishing awareness, data encryption and more.
+       	\end{itemize}
+  	\item Experience: Familiarity with chat-based services
+   	\begin{itemize}
+    		\item Users are expected to possess prior experience using commonly used communication tools and technologies. This can include familiarity with instant messaging apps, email services or collaboration platforms such as Microsoft Teams, Slack, Discord etc.
+      	\end{itemize}
+   	\item Security Clearance: Currently employed by the organization
+    	\begin{itemize}
+     		\item Users must be currently employed by the organization and be permitted to use the application.
+       		\item Users are expected to possess an Android device issued by the organization.
+	\end{itemize}
 \end{itemize}
 
 % End SubSection
@@ -179,7 +191,10 @@ SecureChat is intended to be a user-friendly app designed for the current employ
 \label{sub:constraints}
 % Begin SubSection
 \begin{itemize}
-	\item Provide a general description of any constraints that will limit the developer's options
+	\item \emph{Budget}: The allocated budget of the project will directly impact the technologies developers can use as well as the features that can be included in the initial launch of the application. As of the latest update to this SRS document, the budget allocated to the project is 0 CAD.
+ 	\item \emph{Project Timeline}: Time allocated to the development of the application will affect the scale of the project and the scope of features deployed.
+  	\item \emph{Regulatory Compliance}: The application must adhere to relevant regulatory requirements including but not limited to, PIPEDA and industry-specific data storage guidelines for periodic audits.
+   	\item \emph{Compatibility Requirements}: The application must be compatible with the organization's existing IT infrastructure and network configurations. Additionally, it must compatible with Android devices.
 \end{itemize}
 % End SubSection
 
@@ -187,14 +202,18 @@ SecureChat is intended to be a user-friendly app designed for the current employ
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
 \begin{itemize}
-	\item List any assumptions you made in interpreting what the software being developed is aiming to achieve
-	\item List any other assumptions you made that, if it fails to hold, could require you to change the requirements
-	%\item List each of the factors that affect the requirements stated in the SRS
-	%\item These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS
-	\begin{itemize}
-		\item \textbf{Example}: An assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
-	\end{itemize}
+	\item It is assumed that the app can only be used by current employees and that a user's access to the app must be revoked when and if they leave the organization.
+ 	\item It is assumed that all users of the app have access to Android devices issued by the organization.
+  	\item It is assumed that users will have reliable internet connectivity at all times while using the application. Currently, offline capabilities for users with limited or intermittent internet access is not implemented.	
+   	\item It is assumed that the app is used only by employees who reside in Canada. Usage of the app outside of the country is assumed to be restricted.
+    	\item Innovative feature: Users are allowed to send disappearing messages for as an enhanced security measure. 
 \end{itemize}
+
+Other dependencies that directly impact the app and in case of failure could require a change to the requirements include:
+\begin{itemize}
+	\item The app must be compatible with the latest available version of Android.
+ 	\item Since the functionality of the app relies on the availability and proper functioning of a KDC server, any downtime or unexpected disruptions to the server could impact the user's ability to authenticate and securely communicate using the application.
+
 % End SubSection
 
 \subsection{Apportioning of Requirements}
