@@ -124,22 +124,14 @@
 \label{sec:overall_description}
 % Begin Section
 
-\begin{itemize}
-	\item This section should describe the general factors that affect the product and its requirements. 
-	\item It does not state specific requirements.
-	\item It provides a \emph{background} for those requirements and makes them easier to understand.
-\end{itemize}
-
-
 \subsection{Product Perspective}
 \label{sub:product_perspective}
 % Begin SubSection
-\begin{itemize}
-	\item Put the product into perspective with other related products, i.e., context
-	\item If the product is independent and totally self-contained, it should be stated here
-	\item If the SRS defines a product that is a component of a larger system, then this subsection should relate the requirements of that larger system to the functionality of the software being developed. Identify interfaces between that larger system and the software to be developed.
-	\item A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful
-\end{itemize}
+SecureChat is a chat-based application developed for a specific organization and its employees. Similar, commerically available tools incude popular workplace collaboration softwares like Slack, Microsoft Teams and Discord as well as popular instant messaging services such as WhatsApp, Facebook Messenger and Telegram. SecureChat is designed to be an amalgamation of both of these services and provide secure communication channels for its users.
+
+The app allows users to communicate using individual user-to-user chats or group chats involving multiple users (with a maximum limit of 50). To allow for seamless communication, SecureChat has file sharing functionality that allows users to modify file permissions and share them securely in individual or group chats. Although, user profiles can only be created or deleted by administration for security measures, users are able to modify their personal details as well as details and permissions for group chats (such as name, description and more). Most of these features can be found in the workplace collaboration softwares and instant messaging services listed above. 
+
+The product is a standalone application that is expected to be a part of the organization's existing IT infrastructure. In term of security measures, the app interacts with a KDC server that generates and sends all keys to users at the starting of all secure communication sessions. For regulatory and compliance concerns, the chat history logs for all communication sessions including details such as user profiles, time stamps and message content are securely stored on a server for 2 years from the original timestamp.
 % End SubSection
 
 \subsection{Product Functions}
@@ -206,6 +198,7 @@ SecureChat is intended to be a user-friendly app designed for the current employ
  	\item It is assumed that all users of the app have access to Android devices issued by the organization.
   	\item It is assumed that users will have reliable internet connectivity at all times while using the application. Currently, offline capabilities for users with limited or intermittent internet access is not implemented.	
    	\item It is assumed that the app is used only by employees who reside in Canada. Usage of the app outside of the country is assumed to be restricted.
+    	\item It is assumed that all user profiles must be created/deleted and approved by the administration. Users cannot create new profiles or delete existing profiles on their own.
     	\item Innovative feature: Users are allowed to send disappearing messages for as an enhanced security measure. 
 \end{itemize}
 
@@ -213,6 +206,7 @@ Other dependencies that directly impact the app and in case of failure could req
 \begin{itemize}
 	\item The app must be compatible with the latest available version of Android.
  	\item Since the functionality of the app relies on the availability and proper functioning of a KDC server, any downtime or unexpected disruptions to the server could impact the user's ability to authenticate and securely communicate using the application.
+\end{itemize}
 
 % End SubSection
 
