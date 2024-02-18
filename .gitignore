@@ -14,6 +14,8 @@
 
 *.Zone.Identifier*
 
+*.pdf
+
 ## Intermediate documents:
 *.dvi
 *.xdv
