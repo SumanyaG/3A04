@@ -1,5 +1,5 @@
 \documentclass[]{article}
-
+\usepackage{hyperref}
 % Imported Packages
 %------------------------------------------------------------------------------
 \usepackage{amssymb}
@@ -105,6 +105,29 @@
 	\item Identify each document by title, report number (if applicable), date, and publishing organization.
 	\item Specify the sources from which the references can be obtained.
 	\item Order this list in some sensible manner (alphabetical by author, or something else that makes more sense).
+	\begin{thebibliography}{99}
+		\bibitem{1c} “5 Ultimate Steps To Customize Your Windows Folders to Increase Productivity.” Accessed: Feb. 17, 2024. [Online]. Available: \url{https://www.linkedin.com/pulse/5-ultimate-steps-customize-your-windows-folders-increase-do/}
+		
+		\bibitem{2c} “Web Content Accessibility Guidelines (WCAG) 2.1.” Accessed: Feb. 17, 2024. [Online]. Available: \url{https://www.w3.org/TR/WCAG21/}
+		
+		\bibitem{3c} “How To Set Up Optimal Chat for Your Real-Time Application.” Accessed: Feb. 17, 2024. [Online]. Available: \url{https://subspace.com/resources/optimal-chat-real-time}
+		
+		\bibitem{4c} N. Mansour, “Mobile App Quality: An Essential Guide | Instabug.” Accessed: Feb. 17, 2024. [Online]. Available: \url{https://www.instabug.com/blog/mobile-app-quality-an-essential-guide}
+		
+		\bibitem{5c} “8 Ways to Effectively Reduce Server Response Time,” DataDome. Accessed: Feb. 17, 2024. [Online]. Available: \url{https://datadome.co/learning-center/how-to-reduce-server-response-time/}
+		
+		\bibitem{6c} SentinelOne, “SentinelOne | Service Availability: What It Is and Metrics You Should Know,” SentinelOne. Accessed: Feb. 17, 2024. [Online]. Available: \url{https://www.sentinelone.com/blog/service-availability-and-metrics/}
+		
+		\bibitem{7c} “Our Experience with Modular Architecture,” TRIARE. Accessed: Feb. 17, 2024. [Online]. Available: \url{https://triare.net/insights/modular-architecture-2/}
+		
+		\bibitem{8c} kavinrajan, “Suggested Minimum Android version 2021,” Medium. Accessed: Feb. 17, 2024. [Online]. Available: \url{https://medium.com/@kavinece53/suggested-minimum-android-version-2021-affba3ef74f}
+		
+		\bibitem{9c} “Google Play.” Accessed: Feb. 17, 2024. [Online]. Available: \url{https://play.google.com/about/developer-distribution-agreement.html}
+		
+		\bibitem{10c} O. of the P. C. of Canada, “PIPEDA fair information principles.” Accessed: Feb. 17, 2024. [Online]. Available: \url{https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/p_principle/}
+		
+		\bibitem{11c} “Core app quality,” Android Developers. Accessed: Feb. 17, 2024. [Online]. Available: \url{https://developer.android.com/docs/quality-guidelines/core-app-quality}
+	\end{thebibliography}
 \end{itemize}
 % End SubSection
 
@@ -386,16 +409,36 @@
 	\item In the list below, if a particular section doesn't apply, just write N/A so we know you considered it.
 \end{itemize}
 
+
+
+
+
 % Begin Section
 \subsection{Look and Feel Requirements}
-\label{sub:look_and_feel_requirements}
+\label{sub:look_and_feel_requirements}   
 % Begin SubSection
 
 \subsubsection{Appearance Requirements}
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-A}1. ]
-	\item 
+	\item The system colors shall adhere to the organization's branding. \\
+	{\bf Rationale:} Utilization of company colors is crucial for maintaining a unified professional image, allowing the application to be 
+	recognizable to its users.
+	\item The system shall use clear and recognizable icons and images. \\
+	{\bf Rationale:} Clear and recognizable icons and images will improve application usability, helping users recognize the meaning behind
+	the icons and images. To be clear and recognizable, a standard icon should be high quality and have excellent pixel resolution (24x24 pixels to 48x48 pixels)
+	\cite{1c}.
+	\item The system shall integrate the company seal or emblem within the application design to emphasize professional identity. \\
+	{\bf Rationale:} The inclusion of the company seal reinforces brand authenticity and professionalism.
+	\item Users shall be able to distinguish between incoming and outgoing messages. The system shall display messages in the chat application with distinguishable sender information, timestamp, and message content.  
+	To achieve a distinguishable message format, the system shall use the traditional chat-bubble conversation layout of standard
+	chat applications.\\
+	{\bf Rationale:} A distinguishable message format makes it easier for the users to follow discussions and contributes to an organized and 
+	user-friendly interface. 
+	\item The system shall refrain from utilizing bright and saturated colors as background elements. \\
+	{\bf Rationale:} The system will avoid the use of vibrant and intense hues that could distract and overwhelm users. This creates a 
+	visually balanced and user-friendly interface.
 \end{enumerate}
 % End SubSubSection
 
@@ -403,11 +446,22 @@
 \label{ssub:style_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-S}1. ]
-	\item 
+	\item The application shall adhere to a consistent color scheme throughout the user interface. \\
+	{\bf Rationale:} A consistent color scheme provides a cohesive and unified design. A consistent colour scheme
+	refers to the use of predefined colors that remains uniform across various components of the application.
+	\item The system shall use a font that is legible and readable across different devices, screen resolutions, and lighting conditions. \\
+	{\bf Rationale:} A readable and professional font would allow users to read messages, promoting effective communication among users. 
+	\item The application shall have a clean and professional design reflecting the corporate environment. 
+	{\bf Rationale:} A professional design will use a color palette, font, and visual elements that convey a sense
+	of professionalism and reliability.
+	\item The application shall support responsive design to adapt to various screen sizes and orientations. \\
+	{\bf Rationale:} There are numerous screen sizes and thus, supporting responsive design would ensure that the application 
+	maintains a consistent and visually appealing layout across various device sizes, contributing to a seamless user experience.
 \end{enumerate}
 % End SubSubSection
 
 % End SubSection
+
 
 \subsection{Usability and Humanity Requirements}
 \label{sub:usability_and_humanity_requirements}
@@ -417,23 +471,38 @@
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-EOU}1. ]
-	\item 
-\end{enumerate}
+	\item The system shall have a clear and intuitive navigation layout, ensuring that users can effortlessly locate 
+	the information that they seek. An intuitive layout follows the traditional organization of existing chat applications. \\
+	{\bf Rationale:} An intuitive design ensures that users can seamlessly engage with the application features with minimal learning curve. 
+	This would enhance overall usability and contributes to increased user satisfaction. 
+	\item The system shall allow users to quickly access recent chats, allowing users to efficiently engage with recent 
+	conversations without unnecessary navigation. Recent chat conversations should be located at the top of the users list of conversations.\\
+	{\bf Rationale:} Minimizing user effort to access recent chats ensures seamless user experience and promotes swift interaction 
+	with relevant contacts. Recognizable icons with clear action indicator are contextually relevant and avoids metamorphic imagery. 
+	\item The system shall use icons that clearly indicate the associated action or feature, giving users a visual cue of what each icon represents. \\
+	{\bf Rationale:} This enhances the usability of the application, allowing users to navigate seamlessly through the application. 
+\end{enumerate} 
+
 % End SubSubSection
 
 \subsubsection{Personalization and Internationalization Requirements}
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-PI}1. ]
-	\item 
+	\item The system shall allow users to customize their profiles through addition of personal information (i.e., name, age, gender, date of birth, hometown), profile pictures, and adjustment of chat availability status. \\
+	{\bf Rationale:} Allowing the users to personalize their profiles would foster a sense of identity and self-expression within the application.
 \end{enumerate}
 % End SubSubSection
+
 
 \subsubsection{Learning Requirements}
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-L}1. ]
-	\item 
+	\item The system shall facilitate a user-friendly design that enables users to intuitively navigate and comprehend the chat application's key
+	 features within a maximum time frame of 10 minutes.\\
+	{\bf Rationale:} The absence of any tutorials necessitates achieving an intuitive navigation design
+	that would enable the users to swiftly understand and utilize the chat application within a couple of minutes of using.
 \end{enumerate}
 % End SubSubSection
 
@@ -441,7 +510,13 @@
 \label{ssub:understandability_and_politeness_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-UP}1. ]
-	\item 
+	\item The system shall display informative and user-friendly error messages when an error is encountered or input is invalid. 
+	An informative error message should consist of clear instructions on how to rectify the error written in natural language. \\
+	{\bf Rationale:} A clear error message can help users to understand the nature of the problem. This allows the users to 
+	take appropriate action to resolve the issue, reducing user frustration when an error is encountered.
+	\item The system shall use symbols and icons that are culturally neutral and have universally positive associations and meaning.\\
+	{\bf Rationale:} This requirement entails the avoidance of using symbols that may have different meanings or connotations
+	in various cultures. This means opting for widely used and recognizable symbols.
 \end{enumerate}
 % End SubSubSection
 
@@ -449,11 +524,18 @@
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-A}1. ]
-	\item 
-\end{enumerate}
+	\item The system shall adhere to Web Content Accessibility Guidelines (WCAG) accessibility standards to ensure usability among those with disabilities. This includes providing 
+	alternative text for images and using sufficient color contrast between text and background elements. Text should have a color contrast ratio of at least 4.5:1 and larger text should
+	have at least 3:1 contrast ratio \cite{2c}. \\
+	{\bf Rationale:} Adhering to WCAG standards would ensure that the application is inclusive and accessible to a wider audience.
+\end{enumerate} 
+
 % End SubSubSection
 
 % End SubSection
+
+
+
 
 \subsection{Performance Requirements}
 \label{sub:performance_requirements}
@@ -463,7 +545,25 @@
 \label{ssub:speed_and_latency_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-SL}1. ]
-	\item 
+	\item The system shall deliver messages sent within the chat application to recipients in real-time, with a latency
+	of no more than 250 milliseconds. \\
+	{\bf Rationale:} A minimal latency will ensure that users experience near-instantaneous communication.
+	A latency of 250 milliseconds is acceptable for real-time chat and other interactive messaging applications
+	\cite{3c}.
+	\item The system shall respond to user inputs within 2 seconds or less. \\
+	{\bf Rationale:} A fast response time would enhance user experience making interactions within the application 
+	seem immediate and responsive. A study has shown that 49\% of users expect an application to respond within 2 seconds
+	\cite{4c}.
+	\item The system shall allow users to query chat history with a response time of no more than 500 milliseconds. \\
+	{\bf Rationale:} A swift search query response time enable users to efficiently locate messages in chat history, improving 
+	usability of the application. A response time between 200 milliseconds and 1 second is considered 
+	acceptable and will not hinder user experience
+	\cite{5c}. 
+	\item The system shall process and display response suggestions within a maximum of 500 milliseconds. \\
+	{\bf Rationale:} This requirement provides users a seamless and responsive user experience, reducing 
+	the latency of the suggestion feature. A response time between 200 milliseconds and 1 second is considered 
+	acceptable and will not hinder user experience 
+	\cite{5c}. 
 \end{enumerate}
 % End SubSubSection
 
@@ -471,7 +571,12 @@
 \label{ssub:safety_critical_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-SC}1. ]
-	\item 
+	\item The system shall implement a robust user authentication and authorization mechanism, ensuring only authorized
+	personnel can access and participate in sensitive chat application communications. \\
+	{\bf Rationale:} A robust user authentication reduces the risk of unauthorized access and protects sensitive information
+	from being compromised.
+	\item The system shall securely store a chat history log containing identifiers, date and time of communication, and an accurate chat log.\\
+	{\bf Rationale:} Storing chat log is essential for auditing, accountability, and traceability. \\
 \end{enumerate}
 % End SubSubSection
 
@@ -479,7 +584,23 @@
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-PA}1. ]
-	\item 
+	\item The system shall maintain a timestamp accuracy of $\pm 2$ seconds, ensuring that the displayed
+	time of sent and received messages accurately reflect the time they were processed. \\
+	{\bf Rationale:} Ensuring high precision in the timestamp of message delivery contributes to the reliability
+	and real-time nature of the chat application,  providing a responsive and communication experience to users.
+	\item  The system shall update the user status indicator (online, offline, on vacation) within 1 second of the user 
+	status changing. \\
+	{\bf Rationale:} This requirement ensures that users have a precise understanding of the availability of other user for effective communication.
+	A response time between 200 milliseconds and 1 second is considered acceptable and will not hinder user experience 
+	\cite{5c}. 
+	\item  The system shall accurately log 99.9\% of sent and received messages in the chat history. The content of each message, emojis, and external media files (images, videos, audio)
+	should be logged without any loss or alteration. Edited or deleted messages should be reflected for at least 99.9\% of cases. \\
+	{\bf Rationale:} Ensuring accurate log of chat history is crucial to maintaining data integrity. This ensures that users can trust the system to accurately
+	store chat history, supporting efficient retrieval and review of past messages. A high accuracy is imperative for this application as files and messages should not be altered when stored in the database.
+	\item The system shall remove the disappearing messages from the user interface within at least $\pm 1 second$ of the specified time limit. \\
+	{\bf Rationale:} By defining precision for message removal, users are guaranteed that the messages will be removed from 
+	the user interface at the specified time. A response time between 200 milliseconds and 1 second is considered acceptable and will not hinder user experience
+	\cite{5c}. 
 \end{enumerate}
 % End SubSubSection
 
@@ -487,7 +608,11 @@
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-RA}1. ]
-	\item 
+	\item The system shall have an availability of 99.999\% ensuring that users can access the chat application without 
+	significant downtime. \\
+	{\bf Rationale:} A system that is continuously available is crucial to ensure real-time communication and that the service is accessible whenever
+	the user needs it. As part of the concept of nines in service availability, a good value for availability is at least 99.999\%, ensuring 
+	user contentment \cite{6c}.
 \end{enumerate}
 % End SubSubSection
 
@@ -495,7 +620,14 @@
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-RFT}1. ]
-	\item 
+	\item The system shall remain functional when handling messages containing special characters, emojis, and
+	multimedia content. The system will not crash when a diverse message format is encountered. \\
+	{\bf Rationale:} Having a robust message handling prevents the application from becoming unresponsive and crashing 
+	when faced with an unexpected message content.
+	\item In the event of temporary network disconnection, the system shall have a fault-tolerant mechanism to store unsent messages locally and will automatically 
+	attempt to resend the message once connection is reestablished. \\
+	{\bf Rationale:} This ensures that no message is loss when the chat application is disconnected from the network, maintaining 
+	a seamless user communication experience.
 \end{enumerate}
 % End SubSubSection
 
@@ -503,15 +635,25 @@
 \label{ssub:capacity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-C}1. ]
-	\item 
-\end{enumerate}
+	\item The system shall be able to support a minimum of 50 simultaneous users without degradation in performance and response time. \\
+	{\bf Rationale:} Considering the scope of this project, the chat application should be able to accommodate a medium-size user base without 
+	compromising the user experience. 
+	\item The chat server shall provide a minimum of 1 terabyte storage capacity to securely store chat logs, media files, and other data. \\
+	{\bf Rationale:} This requirement ensures that the application is capable of storing a significant amount of data without running out 
+	of storage space. 
+\end{enumerate} 
+ 
 % End SubSubSection
 
 \subsubsection{Scalability or Extensibility Requirements}
 \label{ssub:scalability_or_extensibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-SE}1. ]
-	\item 
+	\item The system must employ a modular architecture to enable seamless integration and extension of new features 
+	without necessitating any major changes to the existing system. \\
+	{\bf Rationale:} This requirement enables continuous development of the application while facilitating easy integration of new 
+	features. This ensures that the application is capable of evolving with changing requirements 
+	\cite{7c}.
 \end{enumerate}
 % End SubSubSection
 
@@ -519,11 +661,20 @@
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-L}1. ]
-	\item 
+	\item The system shall remain compatible with Android operating system for a minimum of one year, ensuring continued 
+	accessibility across evolving technology. \\
+	{\bf Rationale:} This requirement ensures that the application can adapt to changes in technology and can maintain
+	accessibility over an extended period of time (i.e., considering the scope of this course project).
+	\item The system shall undergo regular software maintenance activities for a minimum of one year from initial release. \\
+	{\bf Rationale:} Regular maintenance of the chat application ensures that the system remains secure and performs efficiently, and
+	that new bugs and issues can be addressed, contributing to continued usefulness. The one year time frame considers the short duration 
+	of this course project.
 \end{enumerate}
 % End SubSubSection
 
 % End SubSection
+
+
 
 \subsection{Operational and Environmental Requirements}
 \label{sub:operational_and_environmental_requirements}
@@ -533,7 +684,7 @@
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE-EPE}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -541,15 +692,18 @@
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE-IA}1. ]
-	\item 
-\end{enumerate}
+	\item The application shall integrate with relevant APIs to fetch and display contextually relevant message response suggestions.\\
+	{\bf Rationale:} Leveraging an external API enables the application to benefit from complex algorithms (Natural Language Processing and 
+	machine learning models) allowing for more intelligent suggestions.
+\end{enumerate} 
+
 % End SubSubSection
 
 \subsubsection{Productization Requirements}
 \label{ssub:productization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-P}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -557,11 +711,16 @@
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
-	\item 
+	\item The application shall be compatible with Android 6.0 or above. \\
+	{\bf Rationale:} This ensures that the application can function on a wide variety of Android devices.
+	As of 2021, over 70\% of Android users have a version of Android 6.0 and above, making it a widely
+	used version of Android \cite{8c}.
 \end{enumerate}
 % End SubSubSection
 
 % End SubSection
+
+
 
 \subsection{Maintainability and Support Requirements}
 \label{sub:maintainability_and_support_requirements}
@@ -571,7 +730,10 @@
 \label{ssub:maintenance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-M}1. ]
-	\item 
+	\item The development team shall address and fix any reported bugs or issues within the chat application.
+	Any critical issues must be resolved within one week of report, while non-critical issues should be addressed within one month. \\
+	{\bf Rationale:} Continuous resolution of issues is crucial in maintaining a stable and secure application,
+	ensuring user satisfaction and confidence.
 \end{enumerate}
 % End SubSubSection
 
@@ -579,7 +741,10 @@
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-S}1. ]
-	\item 
+	\item The system shall maintain a comprehensive frequently asked questions (FAQ) section to provide users with self-service
+	resource for issue resolution. \\
+	{\bf Rationale:} An FAQ would allow users to independently address common queries, reducing the dependency for direct 
+	support.
 \end{enumerate}
 % End SubSubSection
 
@@ -587,11 +752,14 @@
 \label{ssub:adaptability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-A}1. ]
-	\item 
+	\item The system shall be able to run on the most recent version of Android released on Android devices. \\
+	{\bf Rationale:} The system should be able to run on Android devices as this is the platform that it is being designed for.
 \end{enumerate}
 % End SubSubSection
 
 % End SubSection
+
+
 
 \subsection{Security Requirements}
 \label{sub:security_requirements}
@@ -601,7 +769,20 @@
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AC}1. ]
-	\item 
+	\item The system shall enforce session timeouts to automatically log out users after a specified period of inactivity. \\
+	{\bf Rationale:} Session timeout reduce the risk of unauthorized access in case the user forgets to log out.
+	\item The system shall only allow users to access their accounts if the login credentials given by the user are correct. \\
+	{\bf Rationale:} This requirement ensures that access to the user account is attained when correct login details are provided. 
+	It serves as a means to authenticate users and adds a layer of security to user accounts, ensuring that only individuals with the 
+	correct credentials can log in.
+	\item Users shall only be able to access group chats in which they are listed as members. \\
+	{\bf Rationale:} This requirement ensures that users cannot view or participate in any group chats that 
+	they are not part of, ensuring privacy and security within the chat application.
+	\item Regarding the disappearing message feature, users shall not be able to access the already read or seen message if it has exceeded the specified time limit
+	after opening. \\
+	{\bf Rationale:} Disappearing message help protect user privacy by removing sensitive or private information.
+	Once the time limit has been reached, the user will not be able to access the information, reducing risk
+	of unauthorized access.
 \end{enumerate}
 % End SubSubSection
 
@@ -609,7 +790,12 @@
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-INT}1. ]
-	\item 
+	\item The application shall authenticate user to verify the identity of the user accessing the system. \\
+	{\bf Rationale:} Authentication ensures that only authorized users can log in and use the application.
+	\item The application shall ensure that even after removal of the disappearing message from the user interface,
+	the removed message shall be securely stored in the database, maintaining their original content. \\
+	{\bf Rationale:} This requirement ensures a tamper-resistant storage mechanism, preventing manipulation 
+	of the already stored data.
 \end{enumerate}
 % End SubSubSection
 
@@ -617,7 +803,15 @@
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-P}1. ]
-	\item 
+	\item The application shall obtain explicit consent from users before collecting, processing, or sharing sensitive personal information. \\
+	{\bf Rationale:} Collection of explicit consent from the user will ensure that users are aware and agree to the specific use of their sensitive information. 
+	This promotes transparency and helps users make informed decisions about their information. This requirement is part of Google Play Developer
+	Distributor agreement \cite{9c}.
+	\item The application shall have a mechanism for users to access and review their personal information stored by the application. \\
+	{\bf Rationale:} Providing users access to their personal information foster transparency and allows users to verify the accuracy of their data.
+	\item The system shall provide legally adequate privacy notice and protection for the users. This also involves the system using only
+	user information for the sole purpose that the user has given.
+	{\bf Rationale:} This requirement is part of Google Play Developer Distributor agreement \cite{9c}.
 \end{enumerate}
 % End SubSubSection
 
@@ -625,7 +819,10 @@
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AU}1. ]
-	\item 
+	\item The application shall store chat history log for each agent securely on the server. The log shall contain 
+	identifiers of the communication agents, the date and time of the communication, and an accurate chat log. \\
+	{\bf Rationale:} Storing chat history log allows for trail auditing for reviewing past conversations, tracking changes, 
+	and investigating incidents.
 \end{enumerate}
 % End SubSubSection
 
@@ -633,11 +830,17 @@
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item 
+	\item The system shall not accept unexpected input. \\
+	{\bf Rationale:} This requirement aims to prevent attacks like SQL injections, where malicious input is used to manipulate or compromise the database. By rejecting such input, the system prevents unauthorized
+	access attempts.
+	\item  The system shall enforce strict content type validation for file uploads. \\
+	{\bf Rationale:} Validation of content type of uploaded files can prevent attackers from exploiting vulnerabilities associated with improper handling of file uploads.
 \end{enumerate}
 % End SubSubSection
 
 % End SubSection
+
+
 
 \subsection{Cultural and Political Requirements}
 \label{sub:cultural_and_political_requirements}
@@ -647,7 +850,12 @@
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-C}1. ]
-	\item 
+	\item The system shall integrate a calendar that highlights important holidays and events from different cultures. \\
+	{\bf Rationale:} Storing calendar events from different cultures recognizes cultural diversity, helping users stay informed 
+	of significant occasions. 
+	\item The system prevent users from creating accounts with discriminatory names, based on unacceptable words. \\
+	{\bf Rationale:} Preventing creation of discriminatory accounts will foster a professional environment within the workplace and 
+	promotes responsible use.
 \end{enumerate}
 % End SubSubSection
 
@@ -655,11 +863,15 @@
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-P}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
 % End SubSection
+
+
+
+
 
 \subsection{Legal Requirements}
 \label{sub:legal_requirements}
@@ -669,15 +881,40 @@
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-COMP}1. ]
-	\item 
+	\item The system shall comply with data protection laws through user consent for data processing, 
+	providing privacy notices, and implementing measures to secure user data. \\
+	{\bf Rationale:} User privacy is protected and ensures compliance to regulations governing the collection and processing
+	of personal information.
+	\item The system shall collect only the minimum amount of personal information necessary for stated purpose. \\
+	{\bf Rationale:} This supports PIPEDA's principle of limiting the collection of personal information to what is 
+	reasonable necessary \cite{10c}.
+	\item The system shall only disclose or use user personal information for the purpose in which it was collected or 
+	under the individual's consent.\\
+	{\bf Rationale:} This supports PIPEDA's principle of limiting use, disclosure and retention, further protecting the 
+	privacy of the user \cite{10c}.
+	\item The system shall obtain the knowledge and consent of the user when collecting, using, 
+	or disclosing personal information. \\
+	{\bf Rationale:} This supports PIPEDA's principle of consent \cite{10c}.
+	\item The system shall protect user personal information by appropriate security relative to the 
+	sensitivity of the information. \\
+	{\bf Rationale:} This supports PIPEDA's safeguard principle \cite{10c}.
 \end{enumerate}
+
 % End SubSubSection
 
 \subsubsection{Standards Requirements}
 \label{ssub:standards_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-STD}1. ]
-	\item 
+	\item The application shall be designed to be user-friendly and accessible, aligning with legal standards of WCAG. \\
+	{\bf Rationale:} Adherence to WCAG standards ensures legal compliance with inclusive design principle, making the application accessible to users with disabilities
+	\cite{2c}.
+	\item The application shall store all sensitive data in the application's internal storage. \\
+	{\bf Rationale:} This is according to the User Data Policies of the Google Play Store
+	\cite{11c}.
+	\item The application shall use strong cryptographic algorithms and does not implement custom algorithms \\
+	{\bf Rationale:} This is according to the User Data Policies of the Google Play Store
+	\cite{11c}.
 \end{enumerate}
 % End SubSubSection
 
