@@ -264,12 +264,38 @@
 \noindent {\bf Interpretation:} Specify any liberties you took in interpreting business events, if necessary.\\
 
 \begin{enumerate}[{\bf BE1.}]
-	\item Business Event Name \#1
+	\item Authorizing an employee to use the chat application for work purposes. \#1
 		\begin{enumerate}[{\bf VP1.}]
-			\item Viewpoint Name \#1 \\
-				\textcolor{red}{Insert Scenario Here}
-			\item Viewpoint Name \#2 \\
-				\textcolor{red}{Insert Scenario Here}
+			\item Employee user \#1 \\
+				\textcolor{black}{ \bf Main Success Scenario
+    				1.System displays required login fields.
+				2.User inputs personal login information.
+				3.Information is verified by the system.
+				4.User is sent a verification code.
+				5.User enters code.
+				6.System reviews code and if correct, allows user access to the application.
+    				\bf Secondary Scenario
+				3i. The information entered is incorrect.
+	      				3.i.1. The user enters incorrect information.
+	     				3.i.2. The system sends an error message.
+	      				3.i.3. Loop back to BE2.VP1.1
+				4i. The user does not receive the code.
+	      				4.i.1. The user asks the system to resend the code.
+	      				4.i.2. The system sends a new code.
+	      				4.i.3. Loop back to BE2.VP1.4
+     				5i. The code entered is incorrect.
+	      				5.i.1. The user enters incorrect code.
+	      				5.i.2. The system sends an error message.
+	      				5.i.3. Loop back to BE2.VP1.5
+
+
+}
+			\item Organization \#2 \\
+				\textcolor{red}{N/A}
+    			\item Board of Directors \#3 \\
+				\textcolor{red}{N/A}
+			\item IT System Support \#4 \\
+				\textcolor{red}{N/A}
 		\end{enumerate}
 		{\bf Global Scenario:}\\
 		\textcolor{red}{Insert Scenario Here}
