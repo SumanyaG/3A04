@@ -1,5 +1,6 @@
 \documentclass[]{article}
 \usepackage{hyperref}
+\usepackage{caption}
 \usepackage{graphicx}
 \graphicspath{{../signatures/}}
 
@@ -137,10 +138,10 @@ The app allows users to communicate using individual user-to-user chats or group
 \newline
 The product is a standalone application that is expected to be a part of the organization's existing IT infrastructure. In term of security measures, the app interacts with a KDC server that generates and sends all keys to users at the starting of all secure communication sessions. For regulatory and compliance concerns, the chat history logs for all communication sessions including details such as user profiles, time stamps and message content are securely stored on a server for 2 years from the original timestamp.\\
 \newline
-\begin{center}
-\includegraphics[scale=0.5]{system-diagram.png}\\
-\caption{\textbf{Figure 1. System Diagram}}
-\end{center}
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{system-diagram.png}
+	\caption{System Diagram}
+\end{figure}
 % End SubSection
 
 \subsection{Product Functions}
@@ -162,11 +163,13 @@ Security Service                       & \begin{tabular}[c]{@{}l@{}}1. Issue Key
 }
 \end{table}
 
-\begin{center}
-\includegraphics[scale=0.6]{state-diagram.png}\\
-\caption{\textbf{Figure 2. State Diagram}}
-\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{state-diagram.png}
+	\caption{State Diagram}
+\end{figure}
 % End SubSection
+
 
 \subsection{User Characteristics}
 \label{sub:user_characteristics}
