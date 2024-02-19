@@ -152,22 +152,32 @@ A list of the modules of the product and their major functions has been provided
 \hline
 \textbf{Modules} & \textbf{Functions} \\
 \hline
-\multirow{2}{*}{Account and User Profile Service} & \begin{itemize} \item Login \begin{itemize} \item Allows user to login or logout of their account using their employee credentials. \end{itemize} \end{itemize}\\
-& \begin{itemize} \item Updare User Profile \begin{itemize} \item Allows user to modify their profile and status. \end{itemize} \end{itemize}\\
+\multirow{4}{*}{Account and User Profile Service} & \begin{itemize} \item Login \end{itemize}\\ 
+& \begin{itemize} \begin{itemize} \item Allows user to login or logout of their account using their employee credentials. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Updare User Profile \end{itemize} \\
+& \begin{itemize} \begin{itemize} \item Allows user to modify their profile and status. \end{itemize} \end{itemize}\\
 \hline
-\multirow{4}{*}{Chats Service} & \begin{itemize} \item Create Chat \begin{itemize} \item Allows user to start an  individual chat with another user or create a new group chat. \item Allows user to send and receive text messages or share files. \end{itemize} \end{itemize}\\
-& \begin{itemize} \item Modify Group Chat \begin{itemize} \item Allows user to set permissions or modify details of a group chat. \item Allows user to add new members to a group chat or remove existing members from a group chat. \end{itemize} \end{itemize} \\
-& \begin{itemize} \item Receive Notifications \begin{itemize} \item Allows user to be notified whenever a new message is received in a chat or when group chat details are modified. \end{itemize} \end{itemize}\\
-& \begin{itemize} \item Modify Messages \begin{itemize} \item Allows user to modify messages after they have been sent. \end{itemize} \end{itemize}\\
-& \begin{itemize} \item Unsend Messages \begin{itemize} Allows user to unsend a message in a chat after it has been sent. \end{itemize} \end{itemize}\\
+\multirow{12}{*}{Chats Service} & \begin{itemize} \item Create Chat \end{itemize}\\
+& \begin{itemize} \begin{itemize} \item Allows user to start an  individual chat with another user or create a new group chat. \end{itemize} \end{itemize}\\
+& \begin{itemize} \begin{itemize} \item Allows user to send and receive text messages or share files. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Modify Group Chat \end{itemize}\\
+& \begin{itemize} \begin{itemize} \item Allows user to set permissions or modify details of a group chat. \end{itemize} \end{itemize} \\
+& \begin{itemize} \begin{itemize} \item Allows user to add new members to a group chat or remove existing members from a group chat. \end{itemize} \end{itemize} \\
+& \begin{itemize} \item Receive Notifications \end{itemize}\\
+& \begin{itemize} \begin{itemize} \item Allows user to be notified whenever a new message is received in a chat or when group chat details are modified. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Modify Messages \end{itemize}\\
+& \begin{itemize} \begin{itemize} \item Allows user to modify messages after they have been sent. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Unsend Messages \end{itemize}\\
+& \begin{itemize} \begin{itemize} Allows user to unsend a message in a chat after it has been sent. \end{itemize} \end{itemize}\\
 \hline
-Security Service & \begin{itemize} \item Issue Keys \begin{itemize} \item The KDC server issues keys and sends them to communicating agents. \end{itemize} \end{itemize} \\
+\multirow{2}{*}{Security Service} & \begin{itemize} \item Issue Keys \end{itemize}\\
+& \begin{itemize} \begin{itemize} \item The KDC server issues keys and sends them to communicating agents. \end{itemize} \end{itemize}\\
 \hline
 \end{tabular}
 \end{center}
 \newline
 \begin{center}
-\includegraphics[scale=0.25]{state-diagram.png}\\
+\includegraphics[scale=0.40]{state-diagram.png}\\
 \caption{\textbf{Figure 2. State Diagram}}
 \end{center}
 % End SubSection
