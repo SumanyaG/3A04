@@ -280,565 +280,581 @@ messages to the intended recipient.
 % Begin Section
 
 
-\noindent {\bf Main Business Events:} List out all the main business events you are presenting. If you sub-divided into smaller ones, you don't need to include the smaller ones in this list.\\
+\noindent {\bf Main Business Events:} \begin{itemize}
+    \item {\bf BE1: Employees}
+    \item {\bf BE2: IT Support Team}
+    \item {\bf BE3: Organization}
+    \item {\bf BE4: Employees}
+    \item {\bf BE5: IT Support Team}
+    \item {\bf BE6: Organization}
+    \item {\bf BE7: Employees}
+    \item {\bf BE8: IT Support Team}
+    \item {\bf BE9: Organization}
+    \item {\bf BE10: Employees}
+    \item {\bf BE11: IT Support Team}
+\end{itemize}
 
-\noindent {\bf Viewpoints:} List out all the viewpoints you will be considering.\\
+\noindent {\bf Viewpoints:} \begin{itemize}
+    \item {\bf VP1: Employees}
+    \item {\bf VP2: IT Support Team}
+    \item {\bf VP3: Organization}
+\end{itemize}
 
-\noindent {\bf Interpretation:} Specify any liberties you took in interpreting business events, if necessary.\\
+\noindent {\bf Interpretation:} N/A
 
 %%BUSINESS EVENT 1
-
-\begin{enumerate}[\bf {BE}1.]
-	\item Authorizing an employee to use the chat application for work purposes.
-	\item {\bf VP3: Organization}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} The organization provides a list of authorized individuals to the IT Support team.
-			      \end{itemize}
-		      }%
-	      }
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} The IT Support team grants authorization to the individuals to gain access and use the application.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Authorizing an employee to use the chat application for work purposes.}:} \newline
+	
+	\begin{enumerate}[\bf {BE}1.]
+		\item Authorizing an employee to use the chat application for work purposes.
+		\item {\bf VP3: Organization}
+			
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} The organization provides a list of authorized individuals to the IT Support team.
+					\end{itemize}
+				}%
+			}
+                \item {\bf VP2: IT Support Team}
+			
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} The IT Support team grants authorization to the individuals to gain access and use the application.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Authorizing an employee to use the chat application for work purposes.}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
-					\item {\bf $S_{1}$:} The organization provides a list of authorized individuals to the IT Support team. \textcolor{green}{Proceed to E.1}.
-					\item {\bf $E_{1}$:} The IT Support team grants authorization to the individuals to gain access and use the application.\textcolor{green}{Proceed to S.2}.
-					\item {\bf $S_{2}$:} Employees now have access to the system and are authorized to use it.
-
-
-
+                        \item {\bf $S_{1}$:} The organization provides a list of authorized individuals to the IT Support team. \textcolor{green}{Proceed to E.1}.
+					  \item {\bf $E_{1}$:} The IT Support team grants authorization to the individuals to gain access and use the application.\textcolor{green}{Proceed to S.2}.
+					  \item {\bf $S_{2}$:} Employees now have access to the system and are authorized to use it.
+                            
+						
+						
 				\end{itemize}
 			}%
 		}%
-\end{enumerate}
+		\end{enumerate}
 
 
 %%BUSINESS EVENT 2
-
-\begin{enumerate}[\bf {BE}2.]
-	\item Logging onto the chat application
-	\item {\bf VP1: Employee}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} System displays required login fields.
-				      \item {\bf $E_{1}$:} User inputs personal login information.
-				      \item {\bf $S_{2}$:}  Information is verified by the system.
-				      \item {\bf $E_{2}$:}  User is sent a verification code.
-
-				      \item {\bf $S_{3}$:}  User enters code.
-				      \item {\bf $S_{(4)}$:} System reviews code and if correct, allows user access to the application.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Logging onto the chat application}:} \newline
+	
+	\begin{enumerate}[\bf {BE}2.]
+		\item Logging onto the chat application
+		\item {\bf VP1: Employee}
+			
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} System displays required login fields.
+						\item {\bf $E_{1}$:} User inputs personal login information.
+						\item {\bf $S_{2}$:}  Information is verified by the system. 
+						\item {\bf $E_{2}$:}  User is sent a verification code. 
+						
+						\item {\bf $S_{3}$:}  User enters code. 
+						\item {\bf $S_{(4)}$:} System reviews code and if correct, allows user access to the application.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Logging onto the chat application}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
-					\item {\bf $S_{1}$:} System displays required login fields. \textcolor{green}{Proceed to E.1}.
-					\item {\bf $E_{1}$:} User inputs personal login information.\textcolor{green}{Proceed to S.2}.
-					\item {\bf $S_{2}$:}  Information is verified by the system.
-					      \begin{itemize}
-						      {\bf $S_{2}.1$} The user information is inaccurate. \textcolor{red}{Loop to S.1}.
-						      {\bf $S_{2}.2$} The user information is accurate. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-					\item {\bf $E_{2}$:}  User is sent a verification code.  \textcolor{green}{Proceed to S.3}.
-
-					\item {\bf $S_{3}$:}  User enters code.
-					      \begin{itemize}
-						      \item {\bf $S_{3}.1$} The entered code is wrong. \textcolor{red}{Loop to E.2}.
-						      \item {\bf $S_{3}.2$} The user did not receive a code. \textcolor{red}{Proceed to E.2}.
-						      \item {\bf $S_{3}.3$} The code entered is correct. \textcolor{green}{Proceed to S.4}.
-					      \end{itemize}
+                        \item {\bf $S_{1}$:} System displays required login fields. \textcolor{green}{Proceed to E.1}.
+					  \item {\bf $E_{1}$:} User inputs personal login information.\textcolor{green}{Proceed to S.2}.
+					  \item {\bf $S_{2}$:}  Information is verified by the system.
+                            \begin{itemize}
+                                {\bf $S_{2}.1$} The user information is inaccurate. \textcolor{red}{Loop to S.1}.
+                                {\bf $S_{2}.2$} The user information is accurate. \textcolor{green}{Proceed to E.2}.
+                                \end{itemize}
+						\item {\bf $E_{2}$:}  User is sent a verification code.  \textcolor{green}{Proceed to S.3}.
+						
+						\item {\bf $S_{3}$:}  User enters code. 
+                            \begin{itemize}
+                                \item {\bf $S_{3}.1$} The entered code is wrong. \textcolor{red}{Loop to E.2}.
+                                \item {\bf $S_{3}.2$} The user did not receive a code. \textcolor{red}{Proceed to E.2}.
+                                \item {\bf $S_{3}.3$} The code entered is correct. \textcolor{green}{Proceed to S.4}.
+                            \end{itemize}
 					\item {\bf $S_{(4)}$:} User is allowed access to the application.
 				\end{itemize}
 			}%
 		}%
-\end{enumerate}
-
-%%BUSINESS EVENT 3
-\begin{enumerate}[\bf {BE}3.]
-	\item Creating individual chat threads
-	\item {\bf VP1: Employee}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User logs into the application.
-				      \item {\bf $S_{2}$:}  User searches up the individual they want to create a chat with.
-				      \item {\bf $S_{3}$:}  User selects the create chat option and sends a chat to their colleague.
-				      \item {\bf $E_{(1)}$:} Colleague receives chat request. The chat thread is now created.
-			      \end{itemize}
-		      }%
-	      }
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Creating chat threads with an individual}:} \newline
-
-
+		\end{enumerate}
+  
+  %%BUSINESS EVENT 3
+  \begin{enumerate}[\bf {BE}3.]
+		\item Creating individual chat threads
+		\item {\bf VP1: Employee}
+  
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
+				\begin{itemize}
+						\item {\bf $S_{1}$:} User logs into the application.
+						\item {\bf $S_{2}$:}  User searches up the individual they want to create a chat with.
+						\item {\bf $S_{3}$:}  User selects the create chat option and sends a chat to their colleague.
+						\item {\bf $E_{(1)}$:} Colleague receives chat request. The chat thread is now created.
+					\end{itemize}
+				}%
+			}
+            \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Creating chat threads with an individual}:} \newline
+           
+                       
+		\noindent\fbox{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
 					\item {\bf $S_{1}$:} User logs into the application.\textcolor{green}{Proceed to S.2}.
 					\item {\bf $S_{2}$:}  User searches up the individual they want to create a chat with.
-					      \begin{itemize}
-						      \item {\bf $S_{2}.1$} Their colleague is not in the application. \textcolor{red}{Proceed to S.3.1}.
-						      \item {\bf $S_{2}.2$} Their colleague is able to use the application and is in the system. \textcolor{green}{Proceed to E.1}.
-					      \end{itemize}
-					\item {\bf $S_{3}$:}  The IT Support team is notified, and the required colleague is granted authorization to use the system.\textcolor{green}{Proceed to E.1}.
-					\item {\bf $E_{1}$:}  Colleague receives chat invite. Chat thread is created.
-
-				\end{itemize}
+                        \begin{itemize}
+                            \item {\bf $S_{2}.1$} Their colleague is not in the application. \textcolor{red}{Proceed to S.3.1}.
+                            \item {\bf $S_{2}.2$} Their colleague is able to use the application and is in the system. \textcolor{green}{Proceed to E.1}.
+                        \end{itemize}
+                    \item {\bf $S_{3}$:}  The IT Support team is notified, and the required colleague is granted authorization to use the system.\textcolor{green}{Proceed to E.1}.
+                    \item {\bf $E_{1}$:}  Colleague receives chat invite. Chat thread is created. 
+                            
+			\end{itemize}
 			}%
 		}%	
-\end{enumerate}
+		\end{enumerate}
 
-%%BUSINESS EVENT 4
-\begin{enumerate}[\bf {BE}4.]
-	\item Creating chat threads with multiple people
-	\item {\bf VP1: Employee}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User logs into the application.
-				      \item {\bf $S_{2}$:}  User searches up the individuals they want to create a chat with.
-				      \item {\bf $S_{3}$:}  User selects the create chat option and sends a chat to their colleagues.
-				      \item {\bf $E_{(1)}$:} Colleagues receives chat request. The chat thread is now created.
-			      \end{itemize}
-		      }%
-	      }
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Creating chat threads with multiple people}:} \newline
+  %%BUSINESS EVENT 4
+  \begin{enumerate}[\bf {BE}4.]
+		\item Creating chat threads with multiple people
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User logs into the application.
+						\item {\bf $S_{2}$:}  User searches up the individuals they want to create a chat with.
+						\item {\bf $S_{3}$:}  User selects the create chat option and sends a chat to their colleagues.
+						\item {\bf $E_{(1)}$:} Colleagues receives chat request. The chat thread is now created.
+					\end{itemize}
+				}%
+			}
+            \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Creating chat threads with multiple people}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
 					\item {\bf $S_{1}$:} User logs into the application.\textcolor{green}{Proceed to S.2}.
-					\item {\bf $S_{2}$:}  User searches up the individuals they want to create a chat with.
-					      \begin{itemize}
-						      \item {\bf $S_{2}.1$} Their colleagues are not in the application. \textcolor{red}{Proceed to S.3}.
-						      \item {\bf $S_{2}.2$} Their colleagues are able to use the application and is in the system. \textcolor{green}{Proceed to E.1}.
-					      \end{itemize}
-					\item {\bf $S_{3}$:}  The IT Support team is notified, and the required colleagues are granted authorization to use the system.\textcolor{green}{Proceed to E.1}.
-
-					\item {\bf $E_{1}$:}  Colleagues receive chat invite. Chat thread is created.
-
+					\item {\bf $S_{2}$:}  User searches up the individuals they want to create a chat with. 
+                        \begin{itemize}
+                            \item {\bf $S_{2}.1$} Their colleagues are not in the application. \textcolor{red}{Proceed to S.3}.
+                            \item {\bf $S_{2}.2$} Their colleagues are able to use the application and is in the system. \textcolor{green}{Proceed to E.1}.
+                        \end{itemize}
+                    \item {\bf $S_{3}$:}  The IT Support team is notified, and the required colleagues are granted authorization to use the system.\textcolor{green}{Proceed to E.1}.
+						
+					\item {\bf $E_{1}$:}  Colleagues receive chat invite. Chat thread is created. 
+                            
 				\end{itemize}
 			}%
 		}%	
-\end{enumerate}
-
+		\end{enumerate}
+		
 %%BUSINESS EVENT 5
-\begin{enumerate}[\bf {BE}5.]
-	\item Sending text-only chats
-	\item {\bf VP1: Employee}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User opens the relevant chat thread.
-				      \item {\bf $S_{2}$:}  User utilizes the typing box to write a text-based message to their colleague(s).
-				      \item {\bf $S_{3}$:}  User presses the send button to deliver the communication.
-				      \item {\bf $E_{(1)}$:} Colleague(s) receive the chat(s).
-			      \end{itemize}
-		      }%
-	      }
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Sending text-only chats}:} \newline
+  \begin{enumerate}[\bf {BE}5.]
+		\item Sending text-only chats
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User opens the relevant chat thread.
+						\item {\bf $S_{2}$:}  User utilizes the typing box to write a text-based message to their colleague(s).
+						\item {\bf $S_{3}$:}  User presses the send button to deliver the communication.
+						\item {\bf $E_{(1)}$:} Colleague(s) receive the chat(s).
+					\end{itemize}
+				}%
+			}
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Sending text-only chats}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
 					\item {\bf $S_{1}$:} User opens the relevant chat thread.\textcolor{green}{Proceed to S.2}.
 					\item {\bf $S_{2}$:}   User utilizes the typing box to write a text-based message to their colleague(s).\textcolor{green}{Proceed to S.3}.
-					\item {\bf $S_{3}$:}  User presses the send button to deliver the communication.
-					      \begin{itemize}
-						      \item {\bf $S_{3}.1$} The chat does not send. \textcolor{red}{Proceed to S.4}.
-						      \item {\bf $S_{3}.2$} The chat shows as sent, but the other members of the chat do not receive it. \textcolor{red}{Proceed to S.4}.
-						      \item {\bf $S_{3}.3$} The chat sends successfully. \textcolor{green}{Proceed to E.1}.
-					      \end{itemize}
-					\item {\bf $S_{4}$:}  The IT Support team is notified. \textcolor{green}{Proceed to E.1}.
+                     \item {\bf $S_{3}$:}  User presses the send button to deliver the communication.
+                        \begin{itemize}
+                            \item {\bf $S_{3}.1$} The chat does not send. \textcolor{red}{Proceed to S.4}.
+                            \item {\bf $S_{3}.2$} The chat shows as sent, but the other members of the chat do not receive it. \textcolor{red}{Proceed to S.4}.
+                            \item {\bf $S_{3}.3$} The chat sends successfully. \textcolor{green}{Proceed to E.1}.
+                        \end{itemize}
+                    \item {\bf $S_{4}$:}  The IT Support team is notified. \textcolor{green}{Proceed to E.1}.
 					\item {\bf $E_{1}$:}  Colleague receives chat, and can respond accordingly.
-
+                            
 				\end{itemize}
 			}%
 		}%	
-\end{enumerate}
-
+		\end{enumerate}
+		
 %%BUSINESS EVENT 6
-\begin{enumerate}[\bf {BE}6.]
-	\item Sending file attachments in communication.
-	\item {\bf VP1: Employee}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User opens the relevant chat thread.
-				      \item {\bf $S_{2}$:} User utilizes the attachment button to select the file(s) they wish to send.
-				      \item {\bf $S_{3}$:}  User can also drag and drop the file(s) they wish to send in the chat box.
-				      \item {\bf $S_{4}$:}  User presses the send button to deliver the communication.
-				      \item {\bf $E_{(1)}$:} Colleague(s) receive the file attachment(s).
-			      \end{itemize}
-		      }%
-	      }
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Sending file attachments in communication.}:} \newline
+  \begin{enumerate}[\bf {BE}6.]
+		\item Sending file attachments in communication.
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User opens the relevant chat thread.
+						\item {\bf $S_{2}$:} User utilizes the attachment button to select the file(s) they wish to send.
+						\item {\bf $S_{3}$:}  User can also drag and drop the file(s) they wish to send in the chat box.
+                            \item {\bf $S_{4}$:}  User presses the send button to deliver the communication.
+						\item {\bf $E_{(1)}$:} Colleague(s) receive the file attachment(s).
+					\end{itemize}
+				}%
+			}
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Sending file attachments in communication.}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
 					\item {\bf $S_{1}$:} User opens the relevant chat thread.\textcolor{green}{Proceed to S.2}.
 					\item {\bf $S_{2}$:}  User utilizes the attachment button to select the file(s) they wish to send. \textcolor{green}{Proceed to S.3}.
-					\item {\bf $S_{3}$:} User can also drag and drop the file(s) from their laptop they wish to send in the chat box.\textcolor{green}{Proceed to S.4}.
-					\item {\bf $S_{4}$:}  User presses the send button to deliver the communication.
-					      \begin{itemize}
-						      \item {\bf $S_{4}.1$} The file does not send. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{4}.2$} The file shows as sent, but the other members of the chat do not receive it. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{4}.2$} The file is sent and received; however, the receiving individuals are unable to open and view the file. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{4}.3$} The file sends successfully. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-					\item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
-					      \begin{itemize}
-
-						      \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Loop to E.1}.
-						      \item {\bf $E_{1}.2$} The issue is resolved and the file sends successfully. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-					\item {\bf $E_{2}$:}  Colleague receives file, and can open and view the file.
+                    \item {\bf $S_{3}$:} User can also drag and drop the file(s) from their laptop they wish to send in the chat box.\textcolor{green}{Proceed to S.4}.
+                    \item {\bf $S_{4}$:}  User presses the send button to deliver the communication.
+                        \begin{itemize}
+                            \item {\bf $S_{4}.1$} The file does not send. \textcolor{red}{Proceed to E.1}.
+                            \item {\bf $S_{4}.2$} The file shows as sent, but the other members of the chat do not receive it. \textcolor{red}{Proceed to E.1}.
+                            \item {\bf $S_{4}.2$} The file is sent and received; however, the receiving individuals are unable to open and view the file. \textcolor{red}{Proceed to E.1}.
+                             \item {\bf $S_{4}.3$} The file sends successfully. \textcolor{green}{Proceed to E.2}.
+                        \end{itemize}
+                    \item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
+                        \begin{itemize}
+                        
+                        \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Loop to E.1}.
+                        \item {\bf $E_{1}.2$} The issue is resolved and the file sends successfully. \textcolor{green}{Proceed to E.2}.
+                        \end{itemize}
+                    \item {\bf $E_{2}$:}  Colleague receives file, and can open and view the file.
 				\end{itemize}
 			}%
 		}%	
-\end{enumerate}
+		\end{enumerate}
 
 %%BUSINESS EVENT 7
-\begin{enumerate}[\bf {BE}7.]
-	\item Adding individuals to a pre-existing chat
-	\item {\bf VP1: Employee}
+  \begin{enumerate}[\bf {BE}7.]
+		\item Adding individuals to a pre-existing chat
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User opens the relevant chat thread.
+						\item {\bf $S_{2}$:} User searches up the individuals they want to add to the chat.
+						\item {\bf $S_{3}$:}  User selects the add individual option to add them to the chat.
+					\end{itemize}
+				}%
+			}
 
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User opens the relevant chat thread.
-				      \item {\bf $S_{2}$:} User searches up the individuals they want to add to the chat.
-				      \item {\bf $S_{3}$:}  User selects the add individual option to add them to the chat.
-			      \end{itemize}
-		      }%
-	      }
-
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Adding individuals to a pre-existing group chat.}:} \newline
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Adding individuals to a pre-existing group chat.}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
 					\item {\bf $S_{1}$:} User opens the relevant chat thread.\textcolor{green}{Proceed to S.2}.
 					\item {\bf $S_{2}$:}   User searches up the individuals they want to add to the chat.
-					      \begin{itemize}
-						      \item {\bf $S_{2}.1$:} The individual is not found. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{2}.2$:} The individual is in the system. \textcolor{green}{Proceed to S.3}.
-					      \end{itemize}
-					\item {\bf $S_{3}$:}  User selects the add individual option to add them to the chat.
-					      \begin{itemize}
-						      \item {\bf $S_{3}.1$:} The individual cannot be added to the chat. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{3}.2$:} The individual is added to the system. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-
-					\item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
-					      \begin{itemize}
-						      \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $E_{1}.2$} The issue is resolved and the colleague can be added to the chat successfully. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-					\item {\bf $E_{2}$:}  Colleague is added to the chat, and can receive and send messages.
-
+                        \begin{itemize}
+                            \item {\bf $S_{2}.1$:} The individual is not found. \textcolor{red}{Proceed to E.1}.
+                            \item {\bf $S_{2}.2$:} The individual is in the system. \textcolor{green}{Proceed to S.3}.
+                        \end{itemize}
+                    \item {\bf $S_{3}$:}  User selects the add individual option to add them to the chat.
+                        \begin{itemize}
+                            \item {\bf $S_{3}.1$:} The individual cannot be added to the chat. \textcolor{red}{Proceed to E.1}.
+                            \item {\bf $S_{3}.2$:} The individual is added to the system. \textcolor{green}{Proceed to E.2}.
+                        \end{itemize}
+                            
+                    \item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
+                     \begin{itemize}
+                        \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Proceed to E.1}.
+                        \item {\bf $E_{1}.2$} The issue is resolved and the colleague can be added to the chat successfully. \textcolor{green}{Proceed to E.2}.
+                    \end{itemize}
+		\item {\bf $E_{2}$:}  Colleague is added to the chat, and can receive and send messages.
+                            
 				\end{itemize}
 			}%
 		}%	
-\end{enumerate}
+		\end{enumerate}
 
 %%BUSINESS EVENT 8
-\begin{enumerate}[\bf {BE}8.]
-	\item Removing individuals from a pre-existing chat
-	\item {\bf VP1: Employee}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User opens the relevant chat thread.
-				      \item {\bf $S_{2}$:} User searches up the individuals they want to remove from the chat.
-				      \item {\bf $S_{3}$:}  User selects the remove individual option to remove them from the chat.
-			      \end{itemize}
-		      }%
-	      }
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Removing individuals to a pre-existing group chat.}:} \newline
+  \begin{enumerate}[\bf {BE}8.]
+		\item Removing individuals from a pre-existing chat
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User opens the relevant chat thread.
+						\item {\bf $S_{2}$:} User searches up the individuals they want to remove from the chat.
+						\item {\bf $S_{3}$:}  User selects the remove individual option to remove them from the chat.
+					\end{itemize}
+				}%
+			}
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Removing individuals to a pre-existing group chat.}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
 					\item {\bf $S_{1}$:} User opens the relevant chat thread. \textcolor{green}{Proceed to S.1}.
 					\item {\bf $S_{2}$:}   User searches up the individuals they want to remove from the chat.
-					      \begin{itemize}
-						      \item {\bf $S_{2}.1$} The individual is not found. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{2}.2$} The individual is in the chat. \textcolor{green}{Proceed to S.3}.
-					      \end{itemize}
-					\item {\bf $S_{3}$:}  User selects the remove individual option to remove them from the chat.
-					      \begin{itemize}
-						      \item {\bf $S_{3}.1$} The individual cannot be removed from the chat. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{3}.2$} The individual is removed from the chat. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-
-					\item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
-					      \begin{itemize}
-						      \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Loop to E.1}.
-						      \item {\bf $E_{1}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-
+                        \begin{itemize}
+                            \item {\bf $S_{2}.1$} The individual is not found. \textcolor{red}{Proceed to E.1}.
+                            \item {\bf $S_{2}.2$} The individual is in the chat. \textcolor{green}{Proceed to S.3}.
+                        \end{itemize}
+                    \item {\bf $S_{3}$:}  User selects the remove individual option to remove them from the chat.
+                        \begin{itemize}
+                            \item {\bf $S_{3}.1$} The individual cannot be removed from the chat. \textcolor{red}{Proceed to E.1}.
+                            \item {\bf $S_{3}.2$} The individual is removed from the chat. \textcolor{green}{Proceed to E.2}.
+                        \end{itemize}
+                            
+                    \item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
+                        \begin{itemize}
+                            \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Loop to E.1}.
+                            \item {\bf $E_{1}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.2}.
+                        \end{itemize}
+                        
 					\item {\bf $E_{2}$:}  Colleague is removed from the chat, and can no longer receive or send messages, or see/have access to prior communication in that chat thread.
-
-				\end{itemize}
+                            
+			\end{itemize}
 			}%
 		}%	
-\end{enumerate}
+		\end{enumerate}
 
 %%BUSINESS EVENT 9
-\begin{enumerate}[\bf {BE}9.]
-	\item Unsending a chat/communication
-	\item {\bf VP1: Employee}
+  \begin{enumerate}[\bf {BE}9.]
+		\item Unsending a chat/communication
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User opens the relevant chat with the message(s) they want to unsend.
+						\item {\bf $S_{2}$:} User finds the message(s) they want to unsend.
+						\item {\bf $S_{3}$:} User double clicks on the message, and selects the unsend option.
+                            \item {\bf $S_{4}$:} The message disappears and is replaced with a ‘You have unsent this message’ notification.
+					\end{itemize}
+				}%
+			}
 
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User opens the relevant chat with the message(s) they want to unsend.
-				      \item {\bf $S_{2}$:} User finds the message(s) they want to unsend.
-				      \item {\bf $S_{3}$:} User double clicks on the message, and selects the unsend option.
-				      \item {\bf $S_{4}$:} The message disappears and is replaced with a ‘You have unsent this message’ notification.
-			      \end{itemize}
-		      }%
-	      }
-
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Unsending a chat/communication}:} \newline
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Unsending a chat/communication}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
-					\item {\bf $S_{1}$:} User opens the relevant chat with the message(s) they want to unsend.\textcolor{green}{Proceed to S.2}.
-					\item {\bf $S_{2}$:} User finds the message(s) they want to unsend. \textcolor{green}{Proceed to S.3}.
-					\item {\bf $S_{3}$:} User double clicks on the message, and selects the unsend option.
-					      \begin{itemize}
-						      \item {\bf $S_{3}.1$} The message is not unsent. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $S_{3}.2$} The message is successfully unsent. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-
-					\item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
-					      \begin{itemize}
-						      \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $E_{1}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.2}.
-					      \end{itemize}
-
-					\item {\bf $E_{2}$:}  The message is unsent, and the other members of the chat can no longer view it.
-
+					   \item {\bf $S_{1}$:} User opens the relevant chat with the message(s) they want to unsend.\textcolor{green}{Proceed to S.2}.
+					   \item {\bf $S_{2}$:} User finds the message(s) they want to unsend. \textcolor{green}{Proceed to S.3}.
+                        \item {\bf $S_{3}$:} User double clicks on the message, and selects the unsend option.
+                            \begin{itemize}
+                                \item {\bf $S_{3}.1$} The message is not unsent. \textcolor{red}{Proceed to E.1}.
+                                \item {\bf $S_{3}.2$} The message is successfully unsent. \textcolor{green}{Proceed to E.2}.
+                            \end{itemize}
+                            
+                        \item {\bf $E_{1}$:}  A ticket is opened with the IT Support team to resolve the issue.
+                            \begin{itemize}
+                                \item {\bf $E_{1}.1$} The issue is not resolved. \textcolor{red}{Proceed to E.1}.
+                                \item {\bf $E_{1}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.2}.
+                            \end{itemize}
+                        
+					   \item {\bf $E_{2}$:}  The message is unsent, and the other members of the chat can no longer view it.
+                            
 				\end{itemize}
 			}%
 		}%	
-\end{enumerate}
+		\end{enumerate}
 
 %%BUSINESS EVENT 10
-\begin{enumerate}[\bf {BE}10.]
-	\item Signing out of the chat application
-	\item {\bf VP1: Employee}
+  \begin{enumerate}[\bf {BE}10.]
+		\item Signing out of the chat application
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User goes to their profile.
+						\item {\bf $E_{1}$:} User selects the logout option.
+						\item {\bf $S_{(4)}$:} User is successfully logged out.
+					\end{itemize}
+				}%
+			}
 
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User goes to their profile.
-				      \item {\bf $E_{1}$:} User selects the logout option.
-				      \item {\bf $S_{(4)}$:} User is successfully logged out.
-			      \end{itemize}
-		      }%
-	      }
-
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-	      %			
-
-	\item[] {\bf Global Scenario of {\it Signing out of the chat application}:} \newline
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+%			
+		
+		\item[] {\bf Global Scenario of {\it Signing out of the chat application}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
-					\item {\bf $S_{1}$:} User goes to their profile. \textcolor{green}{Proceed to E.1}.
-					\item {\bf $E_{1}$:} User selects the logout option.
-					      \begin{itemize}
-						      \item {\bf $E_{1}.1$} The user is unable to log out. \textcolor{red}{Proceed to E.1}.
-						      \item {\bf $E_{1}.2$} The user successfully logs out. \textcolor{green}{Proceed to E.3}.
-					      \end{itemize}
-					\item {\bf $E_{2}$:}  A ticket is opened with the IT Support team to resolve the issue.
-					      \begin{itemize}
-						      \item {\bf $E_{2}.1$} The issue is not resolved. \textcolor{red}{Loop to E.2}.
-						      \item {\bf $E_{2}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.3}.
-					      \end{itemize}
-					\item {\bf $E_{3}$:}  The message is unsent, and the other members of the chat can no longer view it.
-
+					   \item {\bf $S_{1}$:} User goes to their profile. \textcolor{green}{Proceed to E.1}.
+					   \item {\bf $E_{1}$:} User selects the logout option.
+                            \begin{itemize}
+                                \item {\bf $E_{1}.1$} The user is unable to log out. \textcolor{red}{Proceed to E.1}.
+                                \item {\bf $E_{1}.2$} The user successfully logs out. \textcolor{green}{Proceed to E.3}.
+                            \end{itemize}
+                        \item {\bf $E_{2}$:}  A ticket is opened with the IT Support team to resolve the issue.
+                        \begin{itemize}
+                            \item {\bf $E_{2}.1$} The issue is not resolved. \textcolor{red}{Loop to E.2}.
+                            \item {\bf $E_{2}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.3}.
+                        \end{itemize}
+					  \item {\bf $E_{3}$:}  The message is unsent, and the other members of the chat can no longer view it.
+                            
 					\item {\bf $E_{4}$:}  The user is shown a message saying 'You have been logged out' along with a link to go back to the sign in page. $S_{2}$
-				\end{itemize}
-
-
+     \end{itemize}
+						
+				
 			}%
 		}%
-\end{enumerate}
+		\end{enumerate}
 
 %%BUSINESS EVENT 11
-\begin{enumerate}[\bf {BE}11.]
-	\item Notifications being sent to users.
-	\item {\bf VP1: Employee}
+  \begin{enumerate}[\bf {BE}11.]
+		\item Notifications being sent to users.
+		\item {\bf VP1: Employee}
+  
+			\noindent\fbox{%
+				\parbox{1.0\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} User receives a notification when a chat is directed to them, or if they are mentioned in a chat.
+						\item {\bf $S_{2}$:} User clicks on the notification and is directed to the chat in question.
+					\end{itemize}
+				}%
+			}
 
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} User receives a notification when a chat is directed to them, or if they are mentioned in a chat.
-				      \item {\bf $S_{2}$:} User clicks on the notification and is directed to the chat in question.
-			      \end{itemize}
-		      }%
-	      }
-
-	\item {\bf VP2: IT Support Team}
-
-	      \noindent\fbox{%
-		      \parbox{0.5\textwidth}{%
-			      \begin{itemize}
-				      \item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
-				      \item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
-				      \item {\bf $S_{3}$:} The ticket is closed.
-			      \end{itemize}
-		      }%
-	      }
-
-
-	\item[] {\bf Global Scenario of {\it Signing out of the chat application}:} \newline
+                \item {\bf VP2: IT Support Team}
+  
+			\noindent\fbox{%
+				\parbox{0.5\textwidth}{%
+					\begin{itemize}
+						\item {\bf $S_{1}$:} IT Support Team receives a notification for an open ticket.
+						\item {\bf $S_{2}$:} IT Support Team member resolves the ticket.
+                            \item {\bf $S_{3}$:} The ticket is closed.
+					\end{itemize}
+				}%
+			}
+			
+		
+		\item[] {\bf Global Scenario of {\it Signing out of the chat application}:} \newline
 		\noindent\fbox{%
-			\parbox{0.5\textwidth}{%
+			\parbox{1.0\textwidth}{%
 				\begin{itemize}
-					\item {\bf $S_{1}$:} User receives a notification when a chat is directed to them, or if they are mentioned in a chat.\textcolor{green}{Proceed to S.2}.
-					\item {\bf $S_{2}$:} User clicks on the notification and is directed to the chat in question.
-					      \begin{itemize}
-						      \item {\bf $S_{2}.1$} The user cannot click on the notification to go to the relevant chat. \textcolor{red}{Proceed to E.2}.
-						      \item {\bf $S_{2}.2$} The user can view the relevant chat after clicking on the notification. \textcolor{green}{Proceed to E.3}.
-					      \end{itemize}
+					   \item {\bf $S_{1}$:} User receives a notification when a chat is directed to them, or if they are mentioned in a chat.\textcolor{green}{Proceed to S.2}.
+					   \item {\bf $S_{2}$:} User clicks on the notification and is directed to the chat in question.
+                            \begin{itemize}
+                                \item {\bf $S_{2}.1$} The user cannot click on the notification to go to the relevant chat. \textcolor{red}{Proceed to E.2}.
+                                \item {\bf $S_{2}.2$} The user can view the relevant chat after clicking on the notification. \textcolor{green}{Proceed to E.3}.
+                            \end{itemize}
 
-					\item {\bf $E_{2}$:}  A ticket is opened with the IT Support team to resolve the issue.
-					      \begin{itemize}
-						      \item {\bf $E_{2}.1$} The issue is not resolved. \textcolor{red}{Loop to E.2}.
-						      \item {\bf $E_{2}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.3}.
-					      \end{itemize}
+                    \item {\bf $E_{2}$:}  A ticket is opened with the IT Support team to resolve the issue.
+                    \begin{itemize}
+                        \item {\bf $E_{2}.1$} The issue is not resolved. \textcolor{red}{Loop to E.2}.
+                        \item {\bf $E_{2}.2$} The issue is resolved and the colleague can be removed from the chat successfully. \textcolor{green}{Proceed to E.3}.
+                    \end{itemize}
 					\item {\bf $E_{3}$:}  The user is directed to the chat, and can respond accordingly. The notification banner disappears after the user has addressed it.
-				\end{itemize}
-
+			\end{itemize}
+				
 			}%
 		}%
-\end{enumerate}
-
+		\end{enumerate}
+		
 %End Section
 
 \section{Non-Functional Requirements}
