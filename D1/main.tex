@@ -58,11 +58,11 @@
 % Begin Section
 This Software Requirements Specification (SRS) will outline the requirements and guidelines for the development of SecureChat. SecureChat is a secure communication application designed specifically for the purpose of organizational usage. This document will be discussing the applications purpose, scope, user characteristics, and an overview of the product’s overall functionalities. SecureChat will be employing robust cryptographic measures, as well as secure authentication protocols to protect sensitive information/ data and ensure secure internal communications.
 
-
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
 This SRS focuses on functional requirements, non-functional requirements, user interactions, and security protocols for the SecureChat application.\\
+\newline
 This document is written for the intention of usage by a broad audience including project managers, software developers, security analysts, and stakeholders. No prerequisite knowledge or readings is expected or required.
 % End SubSection
 
@@ -70,7 +70,9 @@ This document is written for the intention of usage by a broad audience includin
 \label{sub:scope}
 % Begin SubSection
 The SecureChat application is the primary software product to be developed. It is designed as an encrypted messaging app for deployment on company-issued Android devices.\\
+\newline
 SecureChat will integrate a Key Distribution Centre (KDC) to manage cryptographic keys and employ an authentication protocol to validate user identities. It will utilize symmetric-key encryption to ensure secure communications within the app. The application is designed to facilitate secure text messaging, file sharing, and guarantee the integrity and confidentiality of chat logs. Additional functionalities include dynamic key generation and rotation, enhancing the app's resilience against potential security threats.\\
+\newline
 The objective of SecureChat is to establish a secure, efficient communication channel within an organization, mitigating risks associated with corporate espionage. By utilizing advanced cryptographic techniques, SecureChat aims to protect sensitive information while maintaining user-friendly operations. Additionally, it seeks to foster trust among employees regarding the organization's commitment to security and privacy. Through these measures, SecureChat aims to offer a robust solution for secure internal communications, thereby protecting against data breaches and unauthorized access to sensitive information.
 % End SubSection
 
@@ -130,33 +132,44 @@ Following this introduction, Section 2 provides an in-depth description of the p
 \label{sub:product_perspective}
 % Begin SubSection
 SecureChat is a chat-based application developed for a specific organization and its employees. Similar, commerically available tools incude popular workplace collaboration softwares like Slack, Microsoft Teams and Discord as well as popular instant messaging services such as WhatsApp, Facebook Messenger and Telegram. SecureChat is designed to be an amalgamation of both of these services and provide secure communication channels for its users.\\
+\newline
 The app allows users to communicate using individual user-to-user chats or group chats involving multiple users (with a maximum limit of 50). To allow for seamless communication, SecureChat has file sharing functionality that allows users to modify file permissions and share them securely in individual or group chats. Although, user profiles can only be created or deleted by administration for security measures, users are able to modify their personal details as well as details and permissions for group chats (such as name, description and more). Most of these features can be found in the workplace collaboration softwares and instant messaging services listed above.\\
+\newline
 The product is a standalone application that is expected to be a part of the organization's existing IT infrastructure. In term of security measures, the app interacts with a KDC server that generates and sends all keys to users at the starting of all secure communication sessions. For regulatory and compliance concerns, the chat history logs for all communication sessions including details such as user profiles, time stamps and message content are securely stored on a server for 2 years from the original timestamp.\\
 \newline
+\begin{center}
 \includegraphics[scale=0.5]{system-diagram.png}\\
-\caption{Figure 1. System Diagram}
+\caption{\textbf{Figure 1. System Diagram}}
+\end{center}
 % End SubSection
 
 \subsection{Product Functions}
 \label{sub:product_functions}
 % Begin SubSection
-
 A list of the modules of the product and their major functions has been provided below:
 \begin{center}
 \begin{tabular}{ |c|c| } 
 \hline
 \textbf{Modules} & \textbf{Functions} \\
 \hline
-Account and User Profile Service & \begin{itemize} \item Login \begin{itemize} \item Allows user to login or logout of their account using their employee credentials. \end{itemize} \item Updare User Profile \begin{itemize} \item Allows user to modify their profile and status.
-\end{itemize} \end{itemize} \\
-Chats Service & \begin{itemize} \item Create Chat \begin{itemize} \item Allows user to start an  individual chat with another user or create a new group chat. \item Allows user to send and receive text messages or share files. \end{itemize} \item Modify Group Chat \begin{itemize} \item Allows user to set permissions or modify details of a group chat. \item Allows user to add new members to a group chat or remove existing members from a group chat. \end{itemize} \item Receive Notifications \begin{itemize} \item Allows user to be notified whenever a new message is received in a chat or when group chat details are modified. \end{itemize} \item Modify Messages \begin{itemize} \item Allows user to modify messages after they have been sent. \end{itemize} \item Unsend Messages \begin{itemize} Allows user to unsend a message in a chat after it has been sent. \end{itemize} \end{itemize} \\
+\multirow{2}{*}{Account and User Profile Service} & \begin{itemize} \item Login \begin{itemize} \item Allows user to login or logout of their account using their employee credentials. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Updare User Profile \begin{itemize} \item Allows user to modify their profile and status. \end{itemize} \end{itemize}\\
+\hline
+\multirow{4}{*}{Chats Service} & \begin{itemize} \item Create Chat \begin{itemize} \item Allows user to start an  individual chat with another user or create a new group chat. \item Allows user to send and receive text messages or share files. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Modify Group Chat \begin{itemize} \item Allows user to set permissions or modify details of a group chat. \item Allows user to add new members to a group chat or remove existing members from a group chat. \end{itemize} \end{itemize} \\
+& \begin{itemize} \item Receive Notifications \begin{itemize} \item Allows user to be notified whenever a new message is received in a chat or when group chat details are modified. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Modify Messages \begin{itemize} \item Allows user to modify messages after they have been sent. \end{itemize} \end{itemize}\\
+& \begin{itemize} \item Unsend Messages \begin{itemize} Allows user to unsend a message in a chat after it has been sent. \end{itemize} \end{itemize}\\
+\hline
 Security Service & \begin{itemize} \item Issue Keys \begin{itemize} \item The KDC server issues keys and sends them to communicating agents. \end{itemize} \end{itemize} \\
 \hline
 \end{tabular}
 \end{center}
 \newline
-\includegraphics[scale=0.5]{state-diagram.png}\\
-\caption{Figure 2. State Diagram}
+\begin{center}
+\includegraphics[scale=0.25]{state-diagram.png}\\
+\caption{\textbf{Figure 2. State Diagram}}
+\end{center}
 % End SubSection
 
 \subsection{User Characteristics}
@@ -164,21 +177,21 @@ Security Service & \begin{itemize} \item Issue Keys \begin{itemize} \item The KD
 % Begin SubSection
 SecureChat is intended to be a user-friendly app designed for the current employees of a specific organization. As a result, the following are the minimum qualifications expected from all users:
 \begin{itemize}
-	\item Education Level: Basic literacy skills
+	\item \textbf{Education Level:} Basic literacy skills
  	\begin{itemize}
   		\item Users are expected to possess basic English literacy skills, specifically reading and writing.
     		\item The interface of the app is intended to be intuitive and user-friendly with clear instructions provided for using security features. This means that users with varying levels of education should be able to use the app.
       	\end{itemize}
- 	\item Technical Expertise: Basic smartphone navigation skills
+ 	\item \textbf{Technical Expertise:} Basic smartphone navigation skills
   	\begin{itemize}
    		\item Users are expected to have basic smartphone (specifically, Android) navigation skills.
      		\item Although not mandatory, ideally, users should have basic security awareness about concepts such as password security, phishing awareness, data encryption and more.
        	\end{itemize}
-  	\item Experience: Familiarity with chat-based services
+  	\item \textbf{Experience:} Familiarity with chat-based services
    	\begin{itemize}
     		\item Users are expected to possess prior experience using commonly used communication tools and technologies. This can include familiarity with instant messaging apps, email services or collaboration platforms such as Microsoft Teams, Slack, Discord etc.
       	\end{itemize}
-   	\item Security Clearance: Currently employed by the organization
+   	\item \textbf{Security Clearance:} Currently employed by the organization
     	\begin{itemize}
      		\item Users must be currently employed by the organization and be permitted to use the application.
        		\item Users are expected to possess an Android device issued by the organization.
@@ -1342,6 +1355,7 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\item 1.5 Overview
 	\item Brainstormed innovative features as a group.
 \end{itemize}
+\includegraphics[width=0.3\textwidth]{awurama signature .jpg}
 
 \subsection{Chelsea Maramot}
 \label{subsec:chelsea_maramot}
@@ -1391,6 +1405,7 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\item 2.6 Apportioning of Requirements
 	\item Brainstormed innovative features as a group.
 \end{itemize}
+\includegraphics[width=0.5\textwidth]{signature.jpeg}
 % End Section
 
 %\newpage
