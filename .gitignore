@@ -13,6 +13,8 @@
 .*.lb
 
 *.Zone.Identifier*
+*.pdf
+.DS_Store
 
 ## Intermediate documents:
 *.dvi
