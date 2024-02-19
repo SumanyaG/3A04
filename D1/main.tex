@@ -18,6 +18,7 @@
 %\usepackage{setspace}
 %\usepackage{xcolor}
 \usepackage{color}
+\usepackage{multirow}
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -125,48 +126,63 @@ Following this introduction, Section 2 provides an in-depth description of the p
 \label{sec:overall_description}
 % Begin Section
 
-\begin{itemize}
-	\item This section should describe the general factors that affect the product and its requirements.
-	\item It does not state specific requirements.
-	\item It provides a \emph{background} for those requirements and makes them easier to understand.
-\end{itemize}
-
-
 \subsection{Product Perspective}
 \label{sub:product_perspective}
 % Begin SubSection
-\begin{itemize}
-	\item Put the product into perspective with other related products, i.e., context
-	\item If the product is independent and totally self-contained, it should be stated here
-	\item If the SRS defines a product that is a component of a larger system, then this subsection should relate the requirements of that larger system to the functionality of the software being developed. Identify interfaces between that larger system and the software to be developed.
-	\item A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful
-\end{itemize}
+SecureChat is a chat-based application developed for a specific organization and its employees. Similar, commerically available tools incude popular workplace collaboration softwares like Slack, Microsoft Teams and Discord as well as popular instant messaging services such as WhatsApp, Facebook Messenger and Telegram. SecureChat is designed to be an amalgamation of both of these services and provide secure communication channels for its users.\\
+The app allows users to communicate using individual user-to-user chats or group chats involving multiple users (with a maximum limit of 50). To allow for seamless communication, SecureChat has file sharing functionality that allows users to modify file permissions and share them securely in individual or group chats. Although, user profiles can only be created or deleted by administration for security measures, users are able to modify their personal details as well as details and permissions for group chats (such as name, description and more). Most of these features can be found in the workplace collaboration softwares and instant messaging services listed above.\\
+The product is a standalone application that is expected to be a part of the organization's existing IT infrastructure. In term of security measures, the app interacts with a KDC server that generates and sends all keys to users at the starting of all secure communication sessions. For regulatory and compliance concerns, the chat history logs for all communication sessions including details such as user profiles, time stamps and message content are securely stored on a server for 2 years from the original timestamp.\\
+\newline
+\includegraphics[scale=0.5]{system-diagram.png}\\
+\caption{Figure 1. System Diagram}
 % End SubSection
 
 \subsection{Product Functions}
 \label{sub:product_functions}
 % Begin SubSection
-\begin{itemize}
-	\item Provide a \emph{summary} of the major functions that the software will perform.
-	      \begin{itemize}
-		      \item \textbf{Example}: An SRS for an accounting program may use this part to address customer account maintenance, customer statement, and invoice preparation without mentioning the vast amount of detail that each of those functions requires.
-	      \end{itemize}
-	\item Functions should be organized in a way that makes the list of functions understandable to the customer or to anyone else reading the document for the first time
-	\item Present the functions in a list format - each item should be one function, with a brief description of it
-	\item Textual or graphical methods can be used to show the different functions and their relationships
-	      \begin{itemize}
-		      \item Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables
-	      \end{itemize}
-\end{itemize}
+
+A list of the modules of the product and their major functions has been provided below:
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+\textbf{Modules} & \textbf{Functions} \\
+\hline
+Account and User Profile Service & \begin{itemize} \item Login \begin{itemize} \item Allows user to login or logout of their account using their employee credentials. \end{itemize} \item Updare User Profile \begin{itemize} \item Allows user to modify their profile and status.
+\end{itemize} \end{itemize} \\
+Chats Service & \begin{itemize} \item Create Chat \begin{itemize} \item Allows user to start an  individual chat with another user or create a new group chat. \item Allows user to send and receive text messages or share files. \end{itemize} \item Modify Group Chat \begin{itemize} \item Allows user to set permissions or modify details of a group chat. \item Allows user to add new members to a group chat or remove existing members from a group chat. \end{itemize} \item Receive Notifications \begin{itemize} \item Allows user to be notified whenever a new message is received in a chat or when group chat details are modified. \end{itemize} \item Modify Messages \begin{itemize} \item Allows user to modify messages after they have been sent. \end{itemize} \item Unsend Messages \begin{itemize} Allows user to unsend a message in a chat after it has been sent. \end{itemize} \end{itemize} \\
+Security Service & \begin{itemize} \item Issue Keys \begin{itemize} \item The KDC server issues keys and sends them to communicating agents. \end{itemize} \end{itemize} \\
+\hline
+\end{tabular}
+\end{center}
+\newline
+\includegraphics[scale=0.5]{state-diagram.png}\\
+\caption{Figure 2. State Diagram}
 % End SubSection
 
 \subsection{User Characteristics}
 \label{sub:user_characteristics}
 % Begin SubSection
+SecureChat is intended to be a user-friendly app designed for the current employees of a specific organization. As a result, the following are the minimum qualifications expected from all users:
 \begin{itemize}
-	\item Describe those general characteristics of the intended users of the product including educational level, experience, and technical expertise
-	\item Since there will be many users, you may wish to divide into different user types or personas
-	      %	\item Do not state specific requirements, but rather provide the reasons why certain specific requirements are later specified
+	\item Education Level: Basic literacy skills
+ 	\begin{itemize}
+  		\item Users are expected to possess basic English literacy skills, specifically reading and writing.
+    		\item The interface of the app is intended to be intuitive and user-friendly with clear instructions provided for using security features. This means that users with varying levels of education should be able to use the app.
+      	\end{itemize}
+ 	\item Technical Expertise: Basic smartphone navigation skills
+  	\begin{itemize}
+   		\item Users are expected to have basic smartphone (specifically, Android) navigation skills.
+     		\item Although not mandatory, ideally, users should have basic security awareness about concepts such as password security, phishing awareness, data encryption and more.
+       	\end{itemize}
+  	\item Experience: Familiarity with chat-based services
+   	\begin{itemize}
+    		\item Users are expected to possess prior experience using commonly used communication tools and technologies. This can include familiarity with instant messaging apps, email services or collaboration platforms such as Microsoft Teams, Slack, Discord etc.
+      	\end{itemize}
+   	\item Security Clearance: Currently employed by the organization
+    	\begin{itemize}
+     		\item Users must be currently employed by the organization and be permitted to use the application.
+       		\item Users are expected to possess an Android device issued by the organization.
+	\end{itemize}
 \end{itemize}
 % End SubSection
 
@@ -174,7 +190,10 @@ Following this introduction, Section 2 provides an in-depth description of the p
 \label{sub:constraints}
 % Begin SubSection
 \begin{itemize}
-	\item Provide a general description of any constraints that will limit the developer's options
+	\item \emph{Budget}: The allocated budget of the project will directly impact the technologies developers can use as well as the features that can be included in the initial launch of the application. As of the latest update to this SRS document, the budget allocated to the project is 0 CAD.
+ 	\item \emph{Project Timeline}: Time allocated to the development of the application will affect the scale of the project and the scope of features deployed.
+  	\item \emph{Regulatory Compliance}: The application must adhere to relevant regulatory requirements including but not limited to, PIPEDA and industry-specific data storage guidelines for periodic audits.
+   	\item \emph{Compatibility Requirements}: The application must be compatible with the organization's existing IT infrastructure and network configurations. Additionally, it must compatible with Android devices.
 \end{itemize}
 % End SubSection
 
@@ -182,13 +201,17 @@ Following this introduction, Section 2 provides an in-depth description of the p
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
 \begin{itemize}
-	\item List any assumptions you made in interpreting what the software being developed is aiming to achieve
-	\item List any other assumptions you made that, if it fails to hold, could require you to change the requirements
-	      %\item List each of the factors that affect the requirements stated in the SRS
-	      %\item These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS
-	      \begin{itemize}
-		      \item \textbf{Example}: An assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
-	      \end{itemize}
+	\item It is assumed that the app can only be used by current employees and that a user's access to the app must be revoked when and if they leave the organization.
+ 	\item It is assumed that all users of the app have access to Android devices issued by the organization.
+  	\item It is assumed that users will have reliable internet connectivity at all times while using the application. Currently, offline capabilities for users with limited or intermittent internet access is not implemented.	
+   	\item It is assumed that the app is used only by employees who reside in Canada. Usage of the app outside of the country is assumed to be restricted.
+    	\item It is assumed that all user profiles must be created/deleted and approved by the administration. Users cannot create new profiles or delete existing profiles on their own.
+    	\item Innovative feature: Users are allowed to send disappearing messages for as an enhanced security measure. 
+\end{itemize}
+Other dependencies that directly impact the app and in case of failure could require a change to the requirements include:
+\begin{itemize}
+	\item The app must be compatible with the latest available version of Android.
+ 	\item Since the functionality of the app relies on the availability and proper functioning of a KDC server, any downtime or unexpected disruptions to the server could impact the user's ability to authenticate and securely communicate using the application.
 \end{itemize}
 % End SubSection
 
@@ -196,7 +219,22 @@ Following this introduction, Section 2 provides an in-depth description of the p
 \label{sub:apportioning_of_requirements}
 % Begin SubSection
 \begin{itemize}
-	\item Identify requirements that may be delayed until future versions of the system
+	\item Integration with third-party services
+ 	\begin{itemize}
+  		\item The app can have possible integrations with third-party services like email services, video conferencing platforms and more.
+    	\end{itemize}
+     	\item Offline mode
+      	\begin{itemize}
+  		\item Currently, the app relies on internet connectivity for receiving keys from the KDC server and authenticating users for each communication session. Alternate methods for authentication that reduce dependency on internet connectivity can be explored in the future.
+    	\end{itemize}
+     	\item Advanced search and filtering
+      	\begin{itemize}
+       		\item Functionality for filtering through conversations using keywords and searching for specific files shared within a chat can be added in future versions of the application.
+	\end{itemize}
+  	\item Additional security measures
+   	\begin{itemize}
+    		\item Measures such as two-factor authentication, data loss preventation and more can be deferred to subsequent releases.
+      	\end{itemize}
 \end{itemize}
 % End SubSection
 
