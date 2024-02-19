@@ -147,18 +147,23 @@ The product is a standalone application that is expected to be a part of the org
 \label{sub:product_functions}
 % Begin SubSection
 A list of the modules of the product and their major functions has been provided below:
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
 \begin{table}[]
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Modules}} & \multicolumn{1}{c|}{\textbf{Functions}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\ \hline
 Account and User Profile Service       & \begin{tabular}[c]{@{}l@{}}1. Login\\ - Allows user to login or logout of their account using their employee credentials.\\ 2. Update User Profile\\ - Allows user to modify their profile and status.\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\ \hline
 Chats Service                          & \begin{tabular}[c]{@{}l@{}}1. Create Chat\\ - Allows user to start an  individual chat with another user or create a new group chat.\\ - Allows user to send and receive text messages or share files.\\ 2. Modify Group Chat\\ - Allows user to set permissions or modify details of a group chat.\\ - Allows user to add new members to a group chat or remove existing members from a group chat.\\ 3. Receive Notifications\\ - Allows user to be notified whenever a new message is received in a chat or when group chat details are modified.\\ 4. Modify Messages\\ - Allows user to modify messages after they have been sent.\\ 5. Unsend Messages\\ - Allows user to unsend a message in a chat after it has been sent.\end{tabular} \\ \hline
 Security Service                       & \begin{tabular}[c]{@{}l@{}}1. Issue Keys\\ - The KDC server issues keys and sends them to communicating agents.\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \\ \hline
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \begin{center}
-\includegraphics[scale=0.50]{state-diagram.png}\\
+\includegraphics[scale=0.75]{state-diagram.png}\\
 \caption{\textbf{Figure 2. State Diagram}}
 \end{center}
 % End SubSection
