@@ -10,6 +10,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \graphicspath{{../signatures/}}
+\usepackage{multirow}
 %\usepackage{extarrows}
 %\usepackage{setspace}
 %------------------------------------------------------------------------------
@@ -139,8 +140,422 @@ This section should contain all of your CRC cards.
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Authentication Management (Controller)
-}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Account Management (Controller)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Success & knows Account Success\\
+		Knows Account Error & Account Error \\
+		Knows Create Account & Create Account\\
+		Knows Login & Login\\
+		Knows Change Status & Change Status\\
+		Knows View Account & View Account\\
+		Knows Account Database & Account Database\\
+		Knows User Information &User Information\\
+		Handles overall account-related functionalities
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Account Success (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Management & Account Management\\
+		Handles unsuccessful events of saving and creating account
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Account Error (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Management & Account Management \\
+		Knows Error Type &\\
+		Knows Error Details &\\
+		Handles account time-out event &\\
+		Handles Creating Account error event &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Create Account (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows Account Management  & Account Management\\
+			Knows Username &\\
+			Knows Password &\\
+			Knows Authorization and Permission Details &\\
+			Handles validation of user-provided information for creating an account &\\
+			Handles click-event of “Create Account” Button &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Edit Account (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows Account Management & Account Management\\
+			Knows Username &\\
+			Knows Password &\\
+			Knows Authorization and Permission Details &\\
+			Handles click-event of “Save” Button &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} View Account(Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows Account Management & Account Management \\
+			Handles display of user account details to the user interface &\\
+			Handles click-event of “View Account” button &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Login(Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows Account Management & Account Management\\
+			Knows Authentication and Authorization details &\\
+			Handles validation of user login credentials &\\
+			Handles click event of “login” button &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Current Status (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows Account Management & Account Management \\
+			Knows User Availability Status (e.g., online, away, do not disturb, custom, in a meeting) &\\
+			Handles updates of current User Availability Status &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} Account Database (Entity)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows Account Management & Account Management \\
+			Knows User Information & User Information \\
+			Knows Account Permissions &\\
+			Knows Account Status &\\
+			Handles storage of user account data &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} User Information (Entity)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+
+			Knows Account Management & Account Management \\
+			Knows Account Database & Account Database \\
+			Knows Username &\\
+			Knows Password &\\
+			Knows Gender &\\
+			Knows Team Manager &\\
+			Knows Company Name &\\
+			Knows Date-of-Birth &\\
+			Handles storage and management of user specific details &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} File Management (Controller)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows File Name & Chat Management Controller\\
+			Knows File Size & File Database\\
+			Knows File Type &\\
+			Knows File Permissions &\\
+			Handles coordination of sending, receiving, and storage of files &\\
+			Handles the enforcement of file access permission &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} File Database (Entity)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows File Management & File Management \\
+			Knows File Name &\\
+			Knows File Size &\\
+			Knows File Type &\\
+			Knows File Permissions &\\
+			Knows File Owner &\\
+			Handles the storage of file data &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} File Search (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows File Management & File Management\\
+			Knows File Search Criteria (e.g., File Name, File Type, File Owner) &\\
+			Handles file search functionality &\\
+			Handles utilization of search criteria to locate and retrieve files matching specified conditions &\\
+			Handles click-event of “Search” button &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} File Retrieval (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows File Management & File Management \\
+			Knows File ID & File Search \\
+			Knows File Name &\\
+			Knows File Type &\\
+			Knows File Owner &\\
+			Handles retrieval of files from storage based on specified file search criteria &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} File Error (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+			Knows File Management & File Management \\
+			Knows Error Type &\\
+			Knows Error Details &\\
+			Handles errors related to file operations (e.g., Invalid File Type Error, File Size Too Big) &\\
+			Handles communication of error information to the user &\\
+		\vspace{0.1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat History Database (Entity)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+     			Knows User Info & User Info \\
+			Knows Send Message & Send Message \\
+			Knows Send Files & Send Files \\
+			Knows Delete/Edit Message & Delete/Edit Message\\
+			Knows Disappearing Message & Disappearing Message \\
+			Handles Load Previous Message events & \\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+  	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Create Group (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows Edit Group Members & Edit Group Members \\
+			Knows Edit Group Details & Edit Group Details \\
+			Knows User Info & User Info \\
+			Handles new group creation events &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+   	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Edit Group Members (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows User Info & User Info \\
+			Handles events pertaining to the addition/removal of members from a group chat &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+   	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Edit Group Details (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows Create Group & Create Group \\
+			Handles events related to editing group chat details including name, description and picture. &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Message Error (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows Send Message & Send Message \\
+			Knows Delete/Edit Message & Delete/Edit Message \\
+			Knows Disappearing Message & Disappearing Message \\
+			Knows Delivered Status Message & Delivered Status Message \\
+   			Handles unsuccessful events of sending a message. &\\
+			Handles unsuccessful events of deleting or editing a message past the set time limit. &\\
+			Handles unsuccessful events of viewing a disappearing message after it has been read. &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat Management Controller} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows File Management Controller & File Management Controller \\
+			Knows Send Message & Send Message \\
+			Knows Send Files & Send Files \\
+			Knows Delete/Edit Message & Delete/Edit Message \\
+			Knows Disappearing Message & Disappearing Message \\
+			Knows Load Previous Message & Load Previous Message \\
+			Knows Delivered Status Message & Delivered Status Message \\
+			Knows Chat History Database & Chat History Database \\
+			Knows Create Group & Create Group \\
+			Knows Edit Group Members & Edit Group Members \\
+			Knows Edit Group Details & Edit Group Details \\
+			Knows Message Error & Message Error \\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} File Permissions (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows File Management Controller & File Management Controller \\
+			Knows File Name & File Name \\
+			Knows File Owner & File Owner \\
+			Knows File Database & File Database \\
+			Knows File Access & File Access \\
+			Knows File Error Handling & File Error Handling \\
+			Handles setting permission for file access events. &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+     	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Authentication Management (Controller)
+		}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -347,9 +762,12 @@ This section should contain all of your CRC cards.
   
 		\end{tabular}
 	\end{table}
-	
 \end{itemize}
+
+
+
 % End Section
+\clearpage
 
 \clearpage
 
