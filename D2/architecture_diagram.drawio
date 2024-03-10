@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2024-03-10T14:19:27.396Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="cVhBbUlAvrausF84kKTY" version="23.1.5" type="device">
+  <diagram name="Page-1" id="mdq0gfGFjj4oobCvXTzF">
+    <mxGraphModel dx="1084" dy="747" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="800" width="570" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-13" value="Key Distribution Center" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="950" width="470" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-17" value="Chat Application" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="410" width="570" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="620" width="570" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-7" target="lnsBRDI3-oGC8brx6PN8-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-7" target="lnsBRDI3-oGC8brx6PN8-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-7" value="Account Manager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-8" target="lnsBRDI3-oGC8brx6PN8-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="895" />
+              <mxPoint x="555" y="895" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-8" target="lnsBRDI3-oGC8brx6PN8-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-8" value="Chat Manager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="495" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-10" value="Accounts DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="350" y="830" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-11" value="Chat Messages DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="525" y="830" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-12" value="Key DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="700" y="830" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-14" value="Authentication Service" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="965" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-15" target="lnsBRDI3-oGC8brx6PN8-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-15" value="Key Register" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="965" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-19" value="User Interface" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="290" y="440" width="530" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-23" target="lnsBRDI3-oGC8brx6PN8-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-48" value="decrypt" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="lnsBRDI3-oGC8brx6PN8-43">
+          <mxGeometry x="-0.7825" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-23" value="Message Manager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-24" target="lnsBRDI3-oGC8brx6PN8-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-47" value="encrypt" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="lnsBRDI3-oGC8brx6PN8-44">
+          <mxGeometry x="0.7825" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-24" value="Messages" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-25" target="lnsBRDI3-oGC8brx6PN8-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-25" value="Chats" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="495" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-31" target="lnsBRDI3-oGC8brx6PN8-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-31" value="Account" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lnsBRDI3-oGC8brx6PN8-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="lnsBRDI3-oGC8brx6PN8-23" target="lnsBRDI3-oGC8brx6PN8-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
