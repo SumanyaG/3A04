@@ -413,7 +413,143 @@ This section should contain all of your CRC cards.
 		\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name:}} \\
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat History Database (Entity)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+     			Knows User Info & User Info \\
+			Knows Send Message & Send Message \\
+			Knows Send Files & Send Files \\
+			Knows Delete/Edit Message & Delete/Edit Message\\
+			Knows Disappearing Message & Disappearing Message \\
+			Handles Load Previous Message events & \\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+  	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Create Group (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows Edit Group Members & Edit Group Members \\
+			Knows Edit Group Details & Edit Group Details \\
+			Knows User Info & User Info \\
+			Handles new group creation events &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+   	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Edit Group Members (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows User Info & User Info \\
+			Handles events pertaining to the addition/removal of members from a group chat &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+   	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Edit Group Details (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows Create Group & Create Group \\
+			Handles events related to editing group chat details including name, description and picture. &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Message Error (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows Chat Management Controller & Chat Management Controller \\
+			Knows Send Message & Send Message \\
+			Knows Delete/Edit Message & Delete/Edit Message \\
+			Knows Disappearing Message & Disappearing Message \\
+			Knows Delivered Status Message & Delivered Status Message \\
+   			Handles unsuccessful events of sending a message. &\\
+			Handles unsuccessful events of deleting or editing a message past the set time limit. &\\
+			Handles unsuccessful events of viewing a disappearing message after it has been read. &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat Management Controller} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows File Management Controller & File Management Controller \\
+			Knows Send Message & Send Message \\
+			Knows Send Files & Send Files \\
+			Knows Delete/Edit Message & Delete/Edit Message \\
+			Knows Disappearing Message & Disappearing Message \\
+			Knows Load Previous Message & Load Previous Message \\
+			Knows Delivered Status Message & Delivered Status Message \\
+			Knows Chat History Database & Chat History Database \\
+			Knows Create Group & Create Group \\
+			Knows Edit Group Members & Edit Group Members \\
+			Knows Edit Group Details & Edit Group Details \\
+			Knows Message Error & Message Error \\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:} File Permissions (Boundary)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+  			Knows File Management Controller & File Management Controller \\
+			Knows File Name & File Name \\
+			Knows File Owner & File Owner \\
+			Knows File Database & File Database \\
+			Knows File Access & File Access \\
+			Knows File Error Handling & File Error Handling \\
+			Handles setting permission for file access events. &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+     	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name:}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
