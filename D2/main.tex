@@ -133,16 +133,218 @@ This section should contain all of your CRC cards.
 \begin{itemize}
 	\item Provide a CRC Card for each identified class
 	\item Please use the format outlined in tutorial, i.e., 
+ 
+%CRC 1 - Authentication Management (Controller)
 	\begin{table}[ht]
 		\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\begin{tabular}{|p{7cm}|p{7cm}|}
 		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name:}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Authentication Management (Controller)
+}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
+            Knows Account Management & Account Management\\
+            
+            Knows User Information & User Information\\
+            Knows Username & Encryption\\
+            Knows Password\
+            
+            \vspace{0.1in}
+            \textbf{Handles token generation which will be used by the user to access their account.}
+
 		\vspace{1in} & \\
 		\hline
+  
+		\end{tabular}
+	\end{table}
+ 
+
+ %CRC 2 - Token Generation (Entity)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Token Generation (Entity)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Account Management & Authentication Management\\
+            
+            Knows User Information & Account Management\\
+            & Encryption\\
+            
+            \vspace{0.1in}
+            \textbf{Handles the generation of a token which will be used by the user to access their account.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+ %CRC 3 - Encryption (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Encryption (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Chat Management & Authentication Management\\
+            Knows User Information & Account Management\\
+            Knows Authentication Management & User Information\\
+            Knows Account Management
+            
+            \vspace{0.1in}
+            \textbf{Handles the overall security and encryption of user data and messages being sent as well as company data.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+ %CRC 4 - Send Message (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Send Message (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Message Contents and Type & Chat Management\\
+            Knows Message Permissions & File Management\\
+            & Encryption\\
+            
+            \vspace{0.1in}
+            \textbf{Handles the sending of messages between accounts.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+ 
+ %CRC 5 - Send Files (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Send Files (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Name & File Management\\
+            Knows File Size & Chat Management\\
+            Knows File Type & Encryption\\
+            Knows File Permissions\\
+            
+            \vspace{0.1in}
+            \textbf{Handles the sending of files between accounts.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+ %CRC 6 - Delete/Edit Messages (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Delete/Edit Messages (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Message Contents and Type & Chat Management\\
+            Knows Message Permissions & File Management\\
+            & Encryption\\
+            
+            \vspace{0.1in}
+            \textbf{Handles the deletion and editing of messages between accounts.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+ %CRC 7 - Disappearing Messages - Set Time (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Disappearing Messages - Set Time (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Message Contents and Type & Chat Management\\
+            Knows Message Permissions & File Management\\
+            & Encryption\\
+            
+            \vspace{0.1in}
+            \textbf{Handles the disappearing of messages after a set time.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+
+ %CRC 8 - Load Previous Message (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Load Previous Message (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Message Contents and Type & Chat Management\\
+            Knows Message Permissions & File Management\\
+            & Encryption\\
+            
+            \vspace{0.1in}
+            \textbf{Handles the storage and loading of previous messages.}
+
+		\vspace{1in} & \\
+		\hline
+  
+		\end{tabular}
+	\end{table}
+
+
+ %CRC 9 - Delivered Status Message (Boundary)
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Delivered Status Message (Boundary)
+}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Message Contents and Type & Chat Management\\
+            Knows Message Permissions & Encryption\\
+            \vspace{0.1in}
+            \textbf{Handles the storage and loading of previous messages.}
+
+		\vspace{1in} & \\
+		\hline
+  
 		\end{tabular}
 	\end{table}
 	
