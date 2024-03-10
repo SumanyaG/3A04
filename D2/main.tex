@@ -6,6 +6,7 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{float}
 \usepackage{fancyhdr}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -120,6 +121,12 @@ This section should provide an overview of the overall architectural design of y
 
 	\item In developing SecureChat, we explored various architectural designs before settling on our final choice. Service-Oriented Architecture (SOA), known for its discrete services and reusability, was considered but deemed too complex for our straightforward requirements. Microservices architecture, offering high scalability and flexibility, was also considered but ultimately regarded as excessive for the integrated nature of SecureChat. Event-Driven Architecture (EDA) was contemplated for its real-time responsiveness; however, its complexity in managing event queues and handlers led us to discard it. These alternatives were evaluated against our priorities of security, cohesion, and straightforward usability, guiding us towards a unified and less segmented approach to ensure SecureChat's security, performance, and maintainability.
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{architecture_diagram.drawio.png}
+	\caption{System Architecture of the Project}
+\end{figure}
 % End SubSection
 
 
@@ -127,6 +134,12 @@ This section should provide an overview of the overall architectural design of y
 \label{sub:subsystems}
 % Begin SubSection
  Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
+
+    The Account Manager subsystem is central to user management operations within the application. It handles tasks such as user authentication, creating new user accounts, and maintaining user data. It interfaces with the Accounts Database (DB), which stores user information securely. By managing user identities (UIDs) and related data, it serves as the backbone for user verification and is critical for maintaining user integrity and security within the application.
+
+    The Chat Manager is responsible for managing the chat sessions. It enables users to view all their chats, add or remove participants, and also manages the encryption keys from the Key Distribution Center (KDC). By interfacing with the Chat Messages DB, it ensures that all chat data is accurately reflected in user sessions. This subsystem works closely with the Message Manager, providing the necessary keys for encryption and decryption of messages.
+
+    Message Manager: Serving as the communication facilitator, the message manager is tasked with handling all aspects of message exchange. It stores, encrypts, and decrypts messages, ensuring they are securely sent to and from users within the chat. This subsystem interacts with Chat Manager subsystem to get the necessary encryption and decryption keys. This is crucial for maintaining the confidentiality of the messages. The Message Manager works in conjunction with the Chat Manager to ensure messages within a chat are properly secured and delivered to the intended recipients.
 
 % End SubSection
 
