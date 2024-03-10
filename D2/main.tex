@@ -102,16 +102,22 @@ This section should provide an analysis class diagram for your application.
 This section should provide an overview of the overall architectural design of your application. Your overall architecture should show the division of the system into subsystems with high cohesion and low coupling.
 
 \subsection{System Architecture}
+\subsection{System Architecture}
 \label{sub:system_architecture}
 % Begin SubSection
 \begin{itemize}
-	\item Identify and explain the overall architecture of your system
-	\item Be sure to clearly state the name of the architecture you used (this is the name of the architectural pattern, not the name of your system)
-	\item Provide the reasoning and justification of the choice of architecture
-	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
-	\item List any design alternatives you considered, but eliminated (and explain why you eliminated them)
+	\item SecureChat utilizes a layered architectural approach tailored for an Android-based application, promoting modularity and scalability in its design. This architecture divides the system into three distinct layers: Presentation, Business Logic, and Data Access, each responsible for different aspects of the application's functionality.
+	
+	\item The architecture used is the "Layered Architecture" pattern. This pattern is specifically chosen for its provision of a clear separation of concerns among the various components of the application, which facilitates ease of maintenance and the flexibility for future development.
+
+	\item The rationale behind choosing this architecture centers on its ability to provide a secure, robust, and adaptable foundation for the application. The separation of concerns among different system parts aids in maintenance and future expansions. This delineation between user interface, processing logic, and data management components strikes a balance between user-friendliness and strict security requirements. Furthermore, the architecture's modular nature supports the gradual integration of new features and technologies, ensuring the application's long-term adaptability without requiring significant system overhauls.
+	
+	\item [structural architecture diagram and its description, detailing the relationships among the subsystems.]
+
+	\item In developing SecureChat, we explored various architectural designs before settling on our final choice. Service-Oriented Architecture (SOA), known for its discrete services and reusability, was considered but deemed too complex for our straightforward requirements. Microservices architecture, offering high scalability and flexibility, was also considered but ultimately regarded as excessive for the integrated nature of SecureChat. Event-Driven Architecture (EDA) was contemplated for its real-time responsiveness; however, its complexity in managing event queues and handlers led us to discard it. These alternatives were evaluated against our priorities of security, cohesion, and straightforward usability, guiding us towards a unified and less segmented approach to ensure SecureChat's security, performance, and maintainability.
 \end{itemize}
 % End SubSection
+
 
 \subsection{Subsystems}
 \label{sub:subsystems}
