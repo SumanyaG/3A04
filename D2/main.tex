@@ -136,11 +136,15 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
 % Begin SubSection
 %  Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
 
-	The Account Manager subsystem is central to user management operations within the application. It handles tasks such as user authentication, creating new user accounts, and maintaining user data. It interfaces with the Accounts Database (DB), which stores user information securely. By managing user identities (UIDs) and related data, it serves as the backbone for user verification and is critical for maintaining user integrity and security within the application. \\
+The repository style is ideal for the Account Manager subsystem because it centralizes user data management, simplifying access and manipulation of account information. By acting as a bridge between the application logic and the data storage, it abstracts the complexities of database interactions, offering an easy interface for retrieving, updating, and storing user details. This approach enhances maintainability, as changes to the database schema or underlying storage mechanism can be isolated within the repository layer, minimizing impact on the rest of the application. Furthermore, it promotes data consistency and integrity, essential for managing sensitive account information, by encapsulating the logic for data access patterns and transactions. The repository style is good for the purpose of account management operations where multiple actors may try to update its data. \\
 
-    The Chat Manager is responsible for managing the chat sessions. It enables users to view all their chats, add or remove participants, and also manages the encryption keys from the Key Distribution Center (KDC). By interfacing with the Chat Messages DB, it ensures that all chat data is accurately reflected in user sessions. This subsystem works closely with the Message Manager, providing the necessary keys for encryption and decryption of messages. \\
+The Chat Manager is responsible for managing the chat sessions. It enables users to view all their chats, add or remove participants, and also manages the encryption keys from the Key Distribution Center (KDC). By interfacing with the Chat Messages DB, it ensures that all chat data is accurately reflected in user sessions. This subsystem works closely with the Message Manager, providing the necessary keys for encryption and decryption of messages. \\
 
-    Message Manager: Serving as the communication facilitator, the message manager is tasked with handling all aspects of message exchange. It stores, encrypts, and decrypts messages, ensuring they are securely sent to and from users within the chat. This subsystem interacts with Chat Manager subsystem to get the necessary encryption and decryption keys. This is crucial for maintaining the confidentiality of the messages. The Message Manager works in conjunction with the Chat Manager to ensure messages within a chat are properly secured and delivered to the intended recipients. \\
+Service-Oriented Architecture (SOA) style is best for ChatManager because it allows for flexible, scalable chat services. The ChatManager acts as a central hub for creating and managing chat sessions, easily integrating with other parts of the application and even external services. This subsystem encapsulates the logic for chat operations and exposes them as services to be used by clients. The modularity allows updates or new features can be added with minimal disruption. SOA's use of standardized protocols ensures seamless communication between different services, making it easier to maintain and extend the system. Additionally, the independence of services under SOA facilitates parallel development and deployment, speeding up the release cycle. \\
+
+Message Manager: Serving as the communication facilitator, the message manager is tasked with handling all aspects of message exchange. It stores, encrypts, and decrypts messages, ensuring they are securely sent to and from users within the chat. This subsystem interacts with Chat Manager subsystem to get the necessary encryption and decryption keys. This is crucial for maintaining the confidentiality of the messages. The Message Manager works in conjunction with the Chat Manager to ensure messages within a chat are properly secured and delivered to the intended recipients. \\
+
+The Message Manager subsystem aligns with the Pipe-and-Filter architectural style. This style has a chain of processors (filters) that does work on its input. Each element is the input to the next. In the case of Message Manager, it handles the flow of messages by performing operations such as validation, encryption/decryption, formatting, and ultimately delivering messages to their intended recipients. Each of these operations can be seen as a "filter" that processes the message data as it moves through the system's pipes. This architecture supports transformations on the message data, enforces message processing rules, and ensures that messages are correctly and securely managed and dispatched.\\
 
 % End SubSection
 
@@ -151,7 +155,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
 % Begin Section
 %This section should contain all of your CRC cards.
 
-\begin{itemize}
 %CRC 1 - Authentication Management (Controller)
 	\begin{table}[ht]
 		\centering
@@ -636,8 +639,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
   
 		\end{tabular}
 	\end{table}
-
- %CRC 4 - Send Message (Boundary)
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
@@ -659,8 +660,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
 		\end{tabular}
 	\end{table}
 
- 
- %CRC 5 - Send Files (Boundary)
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
@@ -683,7 +682,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
 		\end{tabular}
 	\end{table}
 
- %CRC 6 - Delete/Edit Messages (Boundary)
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
@@ -704,8 +702,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
   
 		\end{tabular}
 	\end{table}
-
- %CRC 7 - Disappearing Messages - Set Time (Boundary)
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
@@ -726,9 +722,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
   
 		\end{tabular}
 	\end{table}
-
-
- %CRC 8 - Load Previous Message (Boundary)
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
@@ -749,9 +742,6 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
   
 		\end{tabular}
 	\end{table}
-
-
- %CRC 9 - Delivered Status Message (Boundary)
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{7cm}|p{7cm}|}
@@ -767,10 +757,8 @@ Following this introduction, Section 2 unveils the Analysis Class Diagram, provi
 
 		\vspace{1in} & \\
 		\hline
-  
 		\end{tabular}
 	\end{table}
-\end{itemize}
 
 
 
