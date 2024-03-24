@@ -82,7 +82,20 @@ This section should provide an brief overview of the entire document.
 \section{State Charts for Controller Classes}
 \label{sec:state_charts_for_controller_classes}
 % Begin Section
-This section should provide a state chart for each controller class for your application.
+\renewcommand{\thefigure}{2.\arabic{figure}}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{account-controller.jpg}
+    \caption{Overall Account Management Controller State Diagram}
+    \label{fig:account-controller}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{authenticaton-controller.jpg}
+    \caption{Overall Authentication Management Controller State Diagram}
+    \label{fig:authentication-controller}
+\end{figure}
 % End Section
 
 \section{Sequence Diagrams}
@@ -94,7 +107,14 @@ This section should provide a sequence diagram for each use case of your applica
 \section{Detailed Class Diagram}
 \label{sec:detailed_class_diagram}
 % Begin Section
-This section should provide a detailed class diagram for your application.
+\renewcommand{\thefigure}{4.\arabic{figure}}
+\setcounter{figure}{0}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.18]{class-diagram.jpg}
+    \caption{Overall Class Diagram}
+    \label{fig:class-diagram}
+\end{figure}
 % End Section
 
 \appendix
@@ -106,7 +126,6 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 \subsection{Awurama Nyarko}
 \label{subsec:awurama_nyarko}
 \begin{itemize}
-	\item 1 Introduction
 	\item 1.1 Purpose
 	\item 1.2 System Description
 	\item 1.3 Overview
