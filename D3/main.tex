@@ -13,9 +13,9 @@
 \usepackage{extarrows}
 \usepackage{setspace}
 \usepackage{graphicx}
+\graphicspath{{../signatures}{./SequenceDiagrams}}
 \usepackage{multirow}
 \usepackage{float}
-\graphicspath{{./../signatures}}
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -79,22 +79,19 @@ This section should provide an brief overview of the entire document.
 	\item Explain how the document is organised
 \end{enumerate}
 
-% End SubSection
-
-% End Section
 
 \section{State Charts for Controller Classes}
 \label{sec:state_charts_for_controller_classes}
 % Begin Section
 \renewcommand{\thefigure}{2.\arabic{figure}}
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.25]{account-controller.jpg}
     \caption{Overall Account Management Controller State Diagram}
     \label{fig:account-controller}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{authenticaton-controller.jpg}
     \caption{Overall Authentication Management Controller State Diagram}
@@ -102,11 +99,41 @@ This section should provide an brief overview of the entire document.
 \end{figure}
 % End Section
 
+
 \section{Sequence Diagrams}
 \label{sec:sequence_diagrams}
 % Begin Section
-This section should provide a sequence diagram for each use case of your application.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{BE7.png}
+	\caption{Add Individuals to Chat Sequence Diagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{BE8.png}
+	\caption{Remove Individuals to Chat Sequence Diagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{BE9.png}
+	\caption{Delete Message Sequence Diagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{BE10.png}
+	\caption{Logout Sequence Diagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{BE11.png}
+	\caption{Send Notification Sequence Diagram}
+\end{figure}
 % End Section
+
 
 \section{Detailed Class Diagram}
 \label{sec:detailed_class_diagram}
@@ -120,6 +147,8 @@ This section should provide a sequence diagram for each use case of your applica
     \label{fig:class-diagram}
 \end{figure}
 % End Section
+
+
 
 \appendix
 \section{Division of Labour}
@@ -214,4 +243,3 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 
 
 \end{document}
-%------------------------------------------------------------------------------
