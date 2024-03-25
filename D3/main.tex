@@ -51,6 +51,9 @@
 \section{Introduction}
 \label{sec:introduction}
 % Begin Section
+
+This section should provide a brief overview of the entire document.
+
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
@@ -63,7 +66,9 @@
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-The Secure Chat Application is conceived to establish secure communication channels among employees within an organization, utilizing company-issued Android devices. At its core, the application features a Key Distribution Centre (KDC) for key management, mediated authentication protocols for secure access, and employs robust symmetric-key cryptography for message encryption and decryption. Additionally, it maintains a secure log of chat histories on the server, addressing the organization's requirements for confidentiality and integrity in internal communications. This document extends the system overview presented in Deliverable 2, providing detailed design perspectives essential for the application's development.
+\begin{enumerate}[a)]
+    \item The Secure Chat Application is conceived to establish secure communication channels among employees within an organization, utilizing company-issued Android devices. At its core, the application features a Key Distribution Centre (KDC) for key management, mediated authentication protocols for secure access, and employs robust symmetric-key cryptography for message encryption and decryption. Additionally, it maintains a secure log of chat histories on the server, addressing the organization's requirements for confidentiality and integrity in internal communications. This document extends the system overview presented in Deliverable 2, providing detailed design perspectives essential for the application's development.
+\end{enumerate}
 % End SubSection
 
 \subsection{Overview}
@@ -73,11 +78,23 @@ The Secure Chat Application is conceived to establish secure communication chann
     \item Organized systematically by diagram type, this document is structured to facilitate easy navigation and understanding. Section 2 presents the state chart diagrams for controller classes, illustrating the application's behavior in various states.
     \item Section 3 delves into the sequence diagrams for each use case, showcasing the interactions between different system components. Section 4 concludes with a detailed Unified Modeling Language (UML) class diagram, offering a holistic view of the application's design structure. Together, these sections compose a comprehensive blueprint for the Secure Chat Application, guiding the development process towards successful implementation.
 \end{enumerate}
+% End SubSection
+
+% End Section
 
 
 \section{State Charts for Controller Classes}
 \label{sec:state_charts_for_controller_classes}
 % Begin Section
+This section should provide a state chart for each controller class for your application.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{chat__controller.drawio.png}
+	\caption{State Chart for Chat Controller}
+  \label{fig:chat-controller}
+\end{figure}
+
 \renewcommand{\thefigure}{2.\arabic{figure}}
 \begin{figure}[H]
 	\centering
