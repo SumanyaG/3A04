@@ -1,9 +1,13 @@
-package com.example.securechat;
+package com.example.securechat.Adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.securechat.Fragments.ChatsFragment;
+import com.example.securechat.Fragments.ContactsFragment;
+import com.example.securechat.Fragments.GroupsFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
