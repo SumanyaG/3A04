@@ -12,7 +12,6 @@ import android.widget.Button;
 import com.example.securechat.Controllers.ChatController;
 import com.example.securechat.R;
 
-
 public class GroupsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

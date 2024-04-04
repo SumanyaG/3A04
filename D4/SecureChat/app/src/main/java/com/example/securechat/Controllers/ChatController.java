@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,19 +14,25 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.securechat.R;
 import com.example.securechat.Adapters.ViewPagerAdapter;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ChatController extends AppCompatActivity {
-
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
     FrameLayout frameLayout;
+
+    private DatabaseReference chatDb;
 
     private Button btnCreateGroup;
 
@@ -37,6 +44,8 @@ public class ChatController extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        chatDb = FirebaseDatabase.getInstance().getReference();
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPager);
@@ -96,7 +105,7 @@ public class ChatController extends AppCompatActivity {
                     Toast.makeText(ChatController.this, "Please Write Group Name...", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    CreateNewGroup();
+                    CreateNewGroup(groupName);
                 }
             }
         });
@@ -109,9 +118,16 @@ public class ChatController extends AppCompatActivity {
         });
         builder.show();
     }
-
-    private void CreateNewGroup() {
-        //RootRef.child("Groups").child(groupName).setValue("")
+    private void CreateNewGroup(String groupName) {
+        chatDb.child("Groups").child(groupName).setValue("")
+                .addOnCompleteListener(new OnCompleteListener<Void>(){
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(ChatController.this, groupName+ " group is created successfully!", Toast.LENGTH_SHORT);
+                        }
+                    }
+                });
 
     }
 }
