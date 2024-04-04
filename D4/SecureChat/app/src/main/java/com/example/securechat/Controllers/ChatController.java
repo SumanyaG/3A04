@@ -1,12 +1,17 @@
 package com.example.securechat.Controllers;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -38,33 +43,6 @@ public class ChatController extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
         frameLayout = findViewById(R.id.frameLayout);
-
-
-        btnCreateGroup = findViewById(R.id.createGroupButton);
-        dialog = new Dialog(ChatController.this);
-        dialog.setContentView(R.layout.dialog_create_group);
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.create_group_dialog_bg));
-        dialog.setCancelable(false);
-
-        btnDialogCreate = dialog.findViewById(R.id.btnDiaglogCreate);
-        btnDialogCancel = dialog.findViewById(R.id.btnDiaglogCancel);
-
-        btnDialogCancel.setOnClickListener(new View.OnClickListener(){
-           @Override
-            public void onClick(View v){
-               dialog.dismiss();
-           }
-        });
-
-        btnDialogCreate.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                dialog.dismiss();
-            }
-        });
-
-
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -99,4 +77,41 @@ public class ChatController extends AppCompatActivity {
 
     }
 
+
+    public void RequestNewGroup() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ChatController.this, R.style.AlertDialog);
+        builder.setTitle("Enter Group Name: ");
+
+        final EditText groupNameField = new EditText(ChatController.this);
+        groupNameField.setHint("e.g. Team 1");
+        builder.setView(groupNameField);
+
+
+        builder.setPositiveButton("Create", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String groupName = groupNameField.getText().toString();
+
+                if (TextUtils.isEmpty(groupName)) {
+                    Toast.makeText(ChatController.this, "Please Write Group Name...", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    CreateNewGroup();
+                }
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.show();
+    }
+
+    private void CreateNewGroup() {
+        //RootRef.child("Groups").child(groupName).setValue("")
+
+    }
 }
