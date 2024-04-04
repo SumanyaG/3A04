@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.firebase.database)
     implementation("com.google.firebase:firebase-database")
+    implementation(libs.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

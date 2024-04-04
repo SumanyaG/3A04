@@ -1,5 +1,6 @@
 package com.example.securechat.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,10 +9,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.securechat.Activities.GroupChatActivity;
 import com.example.securechat.Controllers.ChatController;
 import com.example.securechat.R;
 import com.google.firebase.database.DataSnapshot;
@@ -45,6 +48,16 @@ public class GroupsFragment extends Fragment {
         InitializeFields(groupFragmentView);
 
         RetrieveAndDisplayGroups();
+
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String currentGroupName = parent.getItemAtPosition(position).toString();
+                Intent groupChatIntent = new Intent(getContext(), GroupChatActivity.class);
+                groupChatIntent.putExtra("groupName", currentGroupName);
+                startActivity(groupChatIntent);
+            }
+        });
 
         Button createGroupButton = groupFragmentView.findViewById(R.id.createGroupButton);
         createGroupButton.setOnClickListener(new View.OnClickListener() {
