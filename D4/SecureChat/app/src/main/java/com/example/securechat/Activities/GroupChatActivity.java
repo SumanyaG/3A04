@@ -1,5 +1,11 @@
 package com.example.securechat.Activities;
 
+/*
+Sets up Group Chat Interface where
+user can send their messages to members
+of the group
+ */
+
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -31,7 +37,6 @@ public class GroupChatActivity extends AppCompatActivity {
             return insets;
         });
     }
-
     private void InitializeFields() {
         mToolbar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
         getSupportActionBar().setTitle(currentGroupName);

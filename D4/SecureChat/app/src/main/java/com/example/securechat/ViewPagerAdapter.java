@@ -1,4 +1,4 @@
-package com.example.securechat.Adapters;
+package com.example.securechat;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
