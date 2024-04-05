@@ -1,10 +1,10 @@
 package com.example.securechat.Activities;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -13,13 +13,12 @@ import com.example.securechat.R;
 
 public class GroupChatActivity extends AppCompatActivity {
 
+    private Toolbar mToolbar;
     private String currentGroupName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         currentGroupName = getIntent().getExtras().get("groupName").toString();
 
         InitializeFields();
@@ -34,6 +33,7 @@ public class GroupChatActivity extends AppCompatActivity {
     }
 
     private void InitializeFields() {
-        //mToolbar = (Toolbar) findViewById()
+        mToolbar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
+        getSupportActionBar().setTitle(currentGroupName);
     }
 }
