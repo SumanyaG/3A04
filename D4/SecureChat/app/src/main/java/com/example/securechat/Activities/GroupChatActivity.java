@@ -7,6 +7,8 @@ of the group
  */
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,4 +45,11 @@ public class GroupChatActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
         getSupportActionBar().setTitle(currentGroupName);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.upper_nav_chat_menu, menu);
+        return true;
+    };
 }
