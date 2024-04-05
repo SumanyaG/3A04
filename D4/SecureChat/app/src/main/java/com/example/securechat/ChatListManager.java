@@ -39,11 +39,6 @@ public class ChatListManager extends ChatListManagement{
     private static ListView list_view;
     private static DatabaseReference chatDb;
 
-    private Button btnCreateGroup;
-
-    Dialog dialog;
-    Button btnDialogCreate, btnDialogCancel;
-
 
     public ChatListManager() {
         chatDb = FirebaseDatabase.getInstance().getReference().child("Groups");
@@ -133,22 +128,23 @@ public class ChatListManager extends ChatListManagement{
         builder.show();
     }
 
-
-
     @Override
     public String createChatGroup(String groupName) {
+        String groupId = CreateChatGroup.createChatGroup();
+        /*
+        hypothetically add groupName to groupId
+        */
         boolean isGroupAdded = ChatListDatabase.addChatGroups(groupName);
         if (isGroupAdded) {
             Toast.makeText(arrayAdapter.getContext(), groupName + " group is created successfully!", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(arrayAdapter.getContext(), "failed to create group: " + groupName, Toast.LENGTH_SHORT).show();
         }
-        return "";
+        return groupId;
     }
 
     @Override
     public void addUserToChatGroup() {
-
 
     }
 
