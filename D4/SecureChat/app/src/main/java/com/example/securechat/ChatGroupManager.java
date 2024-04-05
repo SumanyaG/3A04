@@ -1,11 +1,43 @@
 package com.example.securechat;
 
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChatGroupManager extends ChatGroupManagement{
 
+    private static DatabaseReference chatDb;
+    private static String groupName;
+    public ChatGroupManager() {
+        chatDb = FirebaseDatabase.getInstance().getReference().child("Groups");
+    }
 
     @Override
-    public void getChatGroup(int chatGroupID) {
+    public void getChatGroup(String chatGroupID) {
+        DatabaseReference groupRef = chatDb.child(groupName).child("members");
 
+        groupRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                List<String> members = new ArrayList<>();
+                for (DataSnapshot memberSnapshot : snapshot.getChildren()) {
+                    String memberId = memberSnapshot.getKey();
+                    members.add(memberId);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
@@ -14,8 +46,10 @@ public class ChatGroupManager extends ChatGroupManagement{
     }
 
     @Override
-    public void addUserToChatGroup() {
-
+    public void addUserToChatGroup(String userId) {
+        groupName = userId; // temporarily
+        DatabaseReference groupRef = chatDb.child(groupName).child("members");
+        groupRef.child(userId).setValue(true);
     }
 
     @Override
@@ -43,10 +77,3 @@ public class ChatGroupManager extends ChatGroupManagement{
 
     }
 }
-
-
-/*
- Intent groupChatIntent = new Intent(getContext(), GroupChatActivity.class);
-                groupChatIntent.putExtra("groupName", currentGroupName);
-                startActivity(groupChatIntent);
- */
