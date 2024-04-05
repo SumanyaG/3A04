@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.securechat.Fragments.ChatsFragment;
 import com.example.securechat.Fragments.ContactsFragment;
 import com.example.securechat.Fragments.GroupsFragment;
 
@@ -20,7 +19,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
         switch (position){
             case 0: return new GroupsFragment();
             case 1: return new ContactsFragment();
-            default: return new ChatsFragment();
+            default: return new GroupsFragment();
         }
     }
 
