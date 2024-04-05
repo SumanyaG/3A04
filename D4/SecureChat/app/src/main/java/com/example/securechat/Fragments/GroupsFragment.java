@@ -2,10 +2,8 @@ package com.example.securechat.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ToggleButton;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.widget.Toast;
 
 import com.example.securechat.Activities.GroupChatActivity;
 import com.example.securechat.Controllers.ChatController;
@@ -35,18 +37,17 @@ public class GroupsFragment extends Fragment {
     private ListView list_view;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> list_of_groups = new ArrayList<>();
-
     private DatabaseReference chatDb;
+    private ToggleButton toggleDisappearingMessages;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View groupFragmentView = inflater.inflate(R.layout.fragment_groups, container, false);
-
         chatDb = FirebaseDatabase.getInstance().getReference().child("Groups");
 
         InitializeFields(groupFragmentView);
-
         RetrieveAndDisplayGroups();
 
         list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -59,11 +60,11 @@ public class GroupsFragment extends Fragment {
             }
         });
 
-        Button createGroupButton = groupFragmentView.findViewById(R.id.createGroupButton);
-        createGroupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((ChatController) requireActivity()).RequestNewGroup();
+        toggleDisappearingMessages = groupFragmentView.findViewById(R.id.toggle_disappearing_messages);
+        toggleDisappearingMessages.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                // Show duration selection dialog
+                showDurationSelectionDialog();
             }
         });
 
@@ -85,7 +86,7 @@ public class GroupsFragment extends Fragment {
                 Iterator iterator = dataSnapshot.getChildren().iterator();
 
                 while (iterator.hasNext()) {
-                    set.add(((DataSnapshot) iterator.next()).getKey());
+                    set.add(iterator.next().getKey());
                 }
 
                 list_of_groups.clear();
@@ -101,5 +102,19 @@ public class GroupsFragment extends Fragment {
 
     }
 
+    private void showDurationSelectionDialog() {
+        final CharSequence[] items = {"5 seconds", "30 seconds", "1 minute", "5 minutes"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Select Duration for Disappearing Messages");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                // Placeholder for actual functionality
+                Toast.makeText(getContext(), items[item] + " selected", Toast.LENGTH_SHORT).show();
+                // Here, you would ideally set the duration for disappearing messages
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 
 }
