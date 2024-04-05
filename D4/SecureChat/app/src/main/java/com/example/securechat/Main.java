@@ -66,7 +66,6 @@ public class Main extends AppCompatActivity {
                 switch (position) {
                     case 0:
                     case 1:
-                    case 2:
                         tabLayout.getTabAt(position).select();
                 }
                 super.onPageSelected(position);

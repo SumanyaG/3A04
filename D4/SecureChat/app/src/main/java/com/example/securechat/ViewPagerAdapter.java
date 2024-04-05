@@ -18,9 +18,8 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position){
-            case 0: return new ChatsFragment();
-            case 1: return new GroupsFragment();
-            case 2: return new ContactsFragment();
+            case 0: return new GroupsFragment();
+            case 1: return new ContactsFragment();
             default: return new ChatsFragment();
         }
     }
@@ -28,6 +27,6 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 2;
     }
 }
