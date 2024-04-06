@@ -20,8 +20,9 @@ public class ChatGroupManager extends ChatGroupManagement {
 
     private static ArrayList<String> list_of_members = new ArrayList<>();
 
-    public ChatGroupManager() {
+    public ChatGroupManager(String groupName) {
         chatDb = FirebaseDatabase.getInstance().getReference().child("Groups");
+        this.groupName = groupName;
     }
 
     @Override
@@ -52,8 +53,7 @@ public class ChatGroupManager extends ChatGroupManagement {
 
     @Override
     public void addUserToChatGroup(String userId) {
-        groupName = userId; // temporarily
-        DatabaseReference groupRef = chatDb.child(groupName).child("members");
+        DatabaseReference groupRef = chatDb.child(groupName).child("Members");
         groupRef.child(userId).setValue(true);
     }
 
