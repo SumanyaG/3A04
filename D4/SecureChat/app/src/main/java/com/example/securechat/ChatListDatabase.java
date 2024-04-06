@@ -33,8 +33,17 @@ public class ChatListDatabase {
         }
         return true;
     }
-    private void removeChatGroups(){
-
+    public static boolean removeChatGroups(String groupName){
+        try{
+            System.out.println("deleting "+ groupName);
+            chatGroups = FirebaseDatabase.getInstance().getReference().child("Groups");
+            chatGroups.child(groupName).removeValue();
+            System.out.println("delete success");
+        }catch(Exception e){
+            System.out.println(e);
+            return false;
+        }
+        return true;
     }
 }
 

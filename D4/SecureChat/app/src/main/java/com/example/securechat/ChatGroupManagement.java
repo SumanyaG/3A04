@@ -1,5 +1,7 @@
 package com.example.securechat;
 
+import java.util.Set;
+
 abstract class ChatGroupManagement {
 
 
@@ -11,6 +13,8 @@ abstract class ChatGroupManagement {
 
     public abstract void removeUserFromChatGroup();
 
+    public abstract boolean deleteChatGroup();
+
     public abstract void retrieveAllMessages();
 
     public abstract void retrieveNewMessages();
@@ -18,4 +22,8 @@ abstract class ChatGroupManagement {
     public abstract void sendMessage();
 
     public abstract void sendCommunicationKeys();
+
+    public abstract void retrieveAllMembers(String groupName, ChatGroupManager.MembersRetrievedCallback callback);
+
+    public abstract void retrieveMembersNotInGroup(String groupName, ChatGroupManager.MembersRetrievedCallback callback);
 }

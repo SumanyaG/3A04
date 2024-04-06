@@ -2,10 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/add_group_members"
-        android:title="add_group_members"
+        android:id="@+id/add_members"
+        android:title="add_members"
         android:icon="@drawable/baseline_add_circle_24"
         app:showAsAction="always"
+        >
+    </item>
+
+    <item
+        android:id="@+id/view_members"
+        android:title="view members"
+        app:showAsAction="never"
+        >
+    </item>
+
+    <item
+        android:id="@+id/delete_chat"
+        android:title="delete chat"
+        app:showAsAction="never"
         >
     </item>
 </menu>
