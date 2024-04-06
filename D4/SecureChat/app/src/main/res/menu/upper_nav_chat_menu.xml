@@ -8,4 +8,18 @@
         app:showAsAction="always"
         >
     </item>
+
+    <item
+        android:id="@+id/view_members"
+        android:title="view members"
+        app:showAsAction="never"
+        >
+    </item>
+
+    <item
+        android:id="@+id/delete_chat"
+        android:title="delete chat"
+        app:showAsAction="never"
+        >
+    </item>
 </menu>

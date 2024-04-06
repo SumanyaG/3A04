@@ -1,7 +1,11 @@
 package com.example.securechat;
 
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,7 +20,7 @@ import java.util.Set;
 public class ChatGroupManager extends ChatGroupManagement {
 
     private static DatabaseReference chatDb;
-    private static String groupName;
+    private String groupName;
 
     private static ArrayList<String> list_of_members = new ArrayList<>();
 
@@ -60,6 +64,11 @@ public class ChatGroupManager extends ChatGroupManagement {
     @Override
     public void removeUserFromChatGroup() {
 
+    }
+
+    @Override
+    public boolean deleteChatGroup() {
+        return ChatListDatabase.removeChatGroups(this.groupName);
     }
 
     @Override

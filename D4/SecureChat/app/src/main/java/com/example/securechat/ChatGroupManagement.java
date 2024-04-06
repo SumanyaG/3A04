@@ -14,6 +14,8 @@ abstract class ChatGroupManagement {
 
     public abstract void removeUserFromChatGroup();
 
+    public abstract boolean deleteChatGroup();
+
     public abstract void retrieveAllMessages();
 
     public abstract void retrieveNewMessages();
