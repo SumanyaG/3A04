@@ -20,6 +20,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 
 import com.example.securechat.Activities.GroupChatActivity;
+import com.example.securechat.Activities.GroupParticipantAddActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

@@ -1,19 +1,7 @@
 package com.example.securechat.Activities;
 
-/*
-Sets up Group Chat Interface where
-user can send their messages to members
-of the group
- */
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
-import com.example.securechat.R;
-
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -25,19 +13,20 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.securechat.R;
 
-public class GroupChatActivity extends AppCompatActivity {
+public class GroupParticipantAddActivity extends AppCompatActivity {
 
-    private Toolbar mToolbar;
     private String currentGroupName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_group_participant_add);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         currentGroupName = getIntent().getExtras().get("groupName").toString();
-
         InitializeFields();
+
 
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_group_chat);
@@ -47,27 +36,18 @@ public class GroupChatActivity extends AppCompatActivity {
             return insets;
         });
     }
-    private void InitializeFields() {
-        mToolbar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
-        getSupportActionBar().setTitle(currentGroupName);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.upper_nav_chat_menu, menu);
-        return true;
-    };
+    private void InitializeFields() {
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
+        getSupportActionBar().setTitle("Add Members to " + currentGroupName);
+    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.add_members) {
-            Intent intent = new Intent(this, GroupParticipantAddActivity.class);
-            intent.putExtra("groupName", currentGroupName);
-            startActivity(intent);
-            Toast.makeText(this, "adding members", Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

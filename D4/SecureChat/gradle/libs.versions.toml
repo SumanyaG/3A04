@@ -13,6 +13,7 @@ navigationUi = "2.6.0"
 googleServices = "4.4.1"
 firebaseDatabase = "20.3.1"
 activity = "1.8.0"
+kotlin = "1.9.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -31,4 +32,5 @@ activity = { group = "androidx.activity", name = "activity", version.ref = "acti
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
