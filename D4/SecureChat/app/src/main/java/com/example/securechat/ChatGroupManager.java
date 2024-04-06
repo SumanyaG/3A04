@@ -9,12 +9,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-public class ChatGroupManager extends ChatGroupManagement{
+public class ChatGroupManager extends ChatGroupManagement {
 
     private static DatabaseReference chatDb;
     private static String groupName;
+
+    private static ArrayList<String> list_of_members = new ArrayList<>();
+
     public ChatGroupManager() {
         chatDb = FirebaseDatabase.getInstance().getReference().child("Groups");
     }
@@ -76,4 +81,63 @@ public class ChatGroupManager extends ChatGroupManagement{
     public void sendCommunicationKeys() {
 
     }
+
+    public interface MembersRetrievedCallback {
+        void onMembersRetrieved(Set<String> members);
+    }
+
+
+    @Override
+    public void retrieveMembersNotInGroup(String groupName, MembersRetrievedCallback callback) {
+        DatabaseReference groupMembersRef = FirebaseDatabase.getInstance().getReference().child("Groups").child(groupName).child("Members");
+        DatabaseReference contactsRef = FirebaseDatabase.getInstance().getReference().child("Contacts");
+
+        final Set<String> membersNotInGroup = new HashSet<>();
+        final Set<String> groupMembers = new HashSet<>();
+        final Set<String> allContacts = new HashSet<>();
+
+        groupMembersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot groupSnapshot) {
+                for (DataSnapshot memberSnapshot : groupSnapshot.getChildren()) {
+                    String memberId = memberSnapshot.getKey();
+                    groupMembers.add(memberId);
+                }
+
+                contactsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot contactsSnapshot) {
+                        for (DataSnapshot contactSnapshot : contactsSnapshot.getChildren()) {
+                            String contactId = contactSnapshot.getKey();
+                            allContacts.add(contactId);
+                        }
+
+                        // Find members not in the group
+                        membersNotInGroup.addAll(allContacts);
+                        membersNotInGroup.removeAll(groupMembers);
+
+                        // Notify callback with the retrieved members
+                        callback.onMembersRetrieved(membersNotInGroup);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        // Handle potential errors
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Handle potential errors
+            }
+        });
+    }
+
+
+
+
+
+
+
 }

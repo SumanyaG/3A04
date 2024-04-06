@@ -1,5 +1,8 @@
 package com.example.securechat;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 abstract class ChatGroupManagement {
 
 
@@ -18,4 +21,6 @@ abstract class ChatGroupManagement {
     public abstract void sendMessage();
 
     public abstract void sendCommunicationKeys();
+
+    public abstract void retrieveMembersNotInGroup(String groupName, ChatGroupManager.MembersRetrievedCallback callback);
 }
