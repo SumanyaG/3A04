@@ -6,11 +6,14 @@ user can send their messages to members
 of the group
  */
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.securechat.ChatGroupManager;
@@ -28,12 +31,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.securechat.R;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 public class GroupChatActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
     private String currentGroupName;
-
     private ChatGroupManager chatGroupManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,8 +90,34 @@ public class GroupChatActivity extends AppCompatActivity {
             }else{
                 Toast.makeText(getApplicationContext(), "failed to delete group", Toast.LENGTH_SHORT).show();
             }
+        }else if(item.getItemId() == R.id.view_members){
+            System.out.println("viewing members");
+            retrieveAndDisplayMembersInGroup();
         }
+
+
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void retrieveAndDisplayMembersInGroup() {
+
+        System.out.println(" in retrieve and display members");
+        chatGroupManager.retrieveAllMembers(currentGroupName, new ChatGroupManager.MembersRetrievedCallback() {
+            @Override
+            public void onMembersRetrieved(Set<String> members) {
+                System.out.println("%%%%%%%%%%%");
+                System.out.println(members);
+                ListView list_view = findViewById(R.id.members_list_view);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(GroupChatActivity.this, R.style.AlertDialog);
+                builder.setTitle("Members");
+                String[] memberArray = members.toArray(new String[0]);
+                builder.setItems(memberArray, null);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
     }
 
 }

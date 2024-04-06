@@ -1,11 +1,7 @@
 package com.example.securechat;
 
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,8 +17,6 @@ public class ChatGroupManager extends ChatGroupManagement {
 
     private static DatabaseReference chatDb;
     private String groupName;
-
-    private static ArrayList<String> list_of_members = new ArrayList<>();
 
     public ChatGroupManager(String groupName) {
         chatDb = FirebaseDatabase.getInstance().getReference().child("Groups");
@@ -91,8 +85,29 @@ public class ChatGroupManager extends ChatGroupManagement {
 
     }
 
+
     public interface MembersRetrievedCallback {
         void onMembersRetrieved(Set<String> members);
+    }
+
+    @Override
+    public void retrieveAllMembers(String groupName, MembersRetrievedCallback callback){
+        DatabaseReference groupMembersRef = FirebaseDatabase.getInstance().getReference().child("Groups").child(groupName).child("Members");
+        final Set<String> members = new HashSet<>();
+
+        groupMembersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot memberSnapshot : dataSnapshot.getChildren()) {
+                    String memberId = memberSnapshot.getKey();
+                    members.add(memberId);
+                }
+                callback.onMembersRetrieved(members);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
     }
 
 
@@ -121,11 +136,9 @@ public class ChatGroupManager extends ChatGroupManagement {
                             allContacts.add(contactId);
                         }
 
-                        // Find members not in the group
                         membersNotInGroup.addAll(allContacts);
                         membersNotInGroup.removeAll(groupMembers);
 
-                        // Notify callback with the retrieved members
                         callback.onMembersRetrieved(membersNotInGroup);
                     }
 
