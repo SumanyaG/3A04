@@ -76,19 +76,8 @@ public class ChatGroupManager extends ChatGroupManagement {
     }
 
     @Override
-    public void sendMessage(String senderId, String messageText, boolean isEphemeral) {
-        long timestamp = System.currentTimeMillis();
-        long expirationTimestamp = isEphemeral ? timestamp + 60000 : Long.MAX_VALUE; // 60000ms (1 minute) for disappearing messages, otherwise set to never expire
-    
-        HashMap<String, Object> messageDetails = new HashMap<>();
-        messageDetails.put("senderId", senderId);
-        messageDetails.put("messageText", messageText);
-        messageDetails.put("timestamp", timestamp);
-        messageDetails.put("expirationTimestamp", expirationTimestamp);
-        messageDetails.put("isEphemeral", isEphemeral);
-    
-        DatabaseReference messagesRef = chatDb.child(this.groupName).child("Messages").push(); // new unique key for each message
-        messagesRef.setValue(messageDetails); // Save the message to Firebase
+    public void sendMessage() {
+
     }
 
     @Override
@@ -167,9 +156,7 @@ public class ChatGroupManager extends ChatGroupManagement {
         });
     }
 
-    public DatabaseReference getMessagesReference(String groupName) {
-        return chatDb.child(groupName).child("Messages");
-    }
+
 
 
 

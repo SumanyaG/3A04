@@ -40,8 +40,7 @@ public class GroupChatActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private String currentGroupName;
     private ChatGroupManager chatGroupManager;
-    private RecyclerView chatMessagesRecyclerView; 
-    private MessageAdapter messageAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +48,9 @@ public class GroupChatActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         currentGroupName = getIntent().getExtras().get("groupName").toString();
-        setContentView(R.layout.activity_group_chat);
+
 
         InitializeFields();
-        initializeRecyclerView();
-        loadMessages();
 
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_group_chat);
@@ -65,16 +62,8 @@ public class GroupChatActivity extends AppCompatActivity {
     }
     private void InitializeFields() {
         mToolbar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
-        setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(currentGroupName);
         chatGroupManager = new ChatGroupManager(currentGroupName);
-    }
-
-    private void initializeRecyclerView() {
-        chatMessagesRecyclerView = findViewById(R.id.chat_messages_recycler_view);
-        messageAdapter = new MessageAdapter(new ArrayList<>());
-        chatMessagesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        chatMessagesRecyclerView.setAdapter(messageAdapter);
     }
 
     @Override
@@ -130,35 +119,5 @@ public class GroupChatActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void loadMessages() {
-        DatabaseReference messagesRef = chatGroupManager.getMessagesReference(currentGroupName); 
-        messagesRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                messageList.clear();
-    
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    ChatMessage message = snapshot.getValue(ChatMessage.class);
-    
-                    if (message != null) {
-                        if (!message.isEphemeral || System.currentTimeMillis() <= message.getExpirationTimestamp()) {
-                            messageList.add(message);
-                        } else {
-                            snapshot.getRef().removeValue();
-                        }
-                    }
-                }
-    
-                messageAdapter.notifyDataSetChanged(); 
-            }
-    
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(GroupChatActivity.this, "Failed to load messages.", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-    
 
 }

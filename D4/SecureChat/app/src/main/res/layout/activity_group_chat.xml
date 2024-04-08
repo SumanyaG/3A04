@@ -13,10 +13,5 @@
         >
     </include>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chat_messages_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/message_input_layout" />
 
 </RelativeLayout>
