@@ -18,11 +18,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.securechat.ChatGroupManager;
+import com.example.securechat.ChatMessage;
 import com.example.securechat.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class GroupParticipantAddActivity extends AppCompatActivity {
@@ -32,6 +40,11 @@ public class GroupParticipantAddActivity extends AppCompatActivity {
     private ListView list_view;
 
     private ChatGroupManager chatGroupManager;
+    private RecyclerView chatMessagesRecyclerView;
+
+    private MessageAdapter messageAdapter;
+
+    private List<ChatMessage> messageList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +62,8 @@ public class GroupParticipantAddActivity extends AppCompatActivity {
         currentGroupName = getIntent().getExtras().get("groupName").toString();
         InitializeFields();
         retrieveAndDisplayMembersNotInGroup();
+
+
 
         list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -106,5 +121,7 @@ public class GroupParticipantAddActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 }

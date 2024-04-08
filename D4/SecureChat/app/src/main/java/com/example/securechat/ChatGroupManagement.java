@@ -19,7 +19,8 @@ abstract class ChatGroupManagement {
 
     public abstract void retrieveNewMessages();
 
-    public abstract void sendMessage();
+
+    public abstract void sendMessage(String senderId, String messageText, boolean isEphemeral);
 
     public abstract void sendCommunicationKeys();
 
