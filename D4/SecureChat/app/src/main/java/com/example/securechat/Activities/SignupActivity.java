@@ -21,8 +21,8 @@ public class SignupActivity extends AppCompatActivity {
     private void signupSuccessful() {
         Toast.makeText(SignupActivity.this, "Sign up successful!", Toast.LENGTH_SHORT).show();
 
-        Intent mainIntent = new Intent(SignupActivity.this, Main.class);
-        startActivity(mainIntent);
+        Intent LoginIntent = new Intent(SignupActivity.this, LoginActivity.class);
+        startActivity(LoginIntent);
         finish();
     }
 
